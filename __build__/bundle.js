@@ -26579,6 +26579,11 @@
 	      },
 	      'https://github.com/rafrex/react-github-pages'
 	    ),
+	    _react2.default.createElement(
+	      'nav',
+	      null,
+	      generateMapMenu()
+	    ),
 	    children
 	  );
 	}
