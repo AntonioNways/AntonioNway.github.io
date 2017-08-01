@@ -84,7 +84,7 @@ function redirectToDomain() {
 const routes = (
   // onEnter hook checks if a redirect is needed before App component is loaded
   <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
-    <IndexRoute component={Home} />
+    <IndexRoute component={Home} /> // pass the component as a child
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />

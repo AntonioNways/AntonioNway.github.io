@@ -23,9 +23,6 @@
   margin-top: 10px;
   }
 
-.xtarget{ 
-  padding-top: 50px; 
-}
 .aboutpic{
   max-height: 230px;
   max-width: 230px;
@@ -72,4 +69,8 @@ body{
 .temppopover:target{
   display: block;
   background-color: red;
+}
+
+.NavStyle{
+  text-decoration:none;
 }
