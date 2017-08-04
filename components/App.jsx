@@ -32,14 +32,14 @@ function App({ children, routes }) {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
               </button>
-                <a href="#Home" className="Nav_Ant NavStyle">Antonio Ng&nbsp;</a>
+                <Link to="/" className="Nav_Ant NavStyle">Antonio Ng&nbsp;</Link>
               </div>
               <div className="collapse navbar-collapse" id="TopNavBar1">
                 <ul className="nav navbar-nav navbar-right nav_top_margin1">
                   <li className="">
-                    <a href="#Home"><span className="sr-only">(current)</span>
+                    <Link to="/"><span className="sr-only">(current)</span>
                       <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; About
-                    </a>
+                    </Link>
                   </li>
                   <li className="">
                     <Link to="/example"><span className="sr-only">(current)</span>
@@ -47,9 +47,9 @@ function App({ children, routes }) {
                     </Link>
                   </li>
                   <li className="">
-                    <a href="#Contact_me"><span className="sr-only">(current)</span>
+                    <Link to="/example"><span className="sr-only">(current)</span>
                       <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp; Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <ul className="nav navbar-nav navbar-centre nav_top_margin1">

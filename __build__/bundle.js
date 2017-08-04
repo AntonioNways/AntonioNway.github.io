@@ -26608,8 +26608,8 @@
 	              _react2.default.createElement('span', { className: 'icon-bar' })
 	            ),
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#Home', className: 'Nav_Ant NavStyle' },
+	              _reactRouter.Link,
+	              { to: '/', className: 'Nav_Ant NavStyle' },
 	              'Antonio Ng\xA0'
 	            )
 	          ),
@@ -26623,8 +26623,8 @@
 	                'li',
 	                { className: '' },
 	                _react2.default.createElement(
-	                  'a',
-	                  { href: '#Home' },
+	                  _reactRouter.Link,
+	                  { to: '/' },
 	                  _react2.default.createElement(
 	                    'span',
 	                    { className: 'sr-only' },
@@ -26653,8 +26653,8 @@
 	                'li',
 	                { className: '' },
 	                _react2.default.createElement(
-	                  'a',
-	                  { href: '#Contact_me' },
+	                  _reactRouter.Link,
+	                  { to: '/example' },
 	                  _react2.default.createElement(
 	                    'span',
 	                    { className: 'sr-only' },
