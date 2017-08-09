@@ -38,17 +38,17 @@ function App({ children, routes }) {
                 <ul className="nav navbar-nav navbar-right nav_top_margin1">
                   <li className="">
                     <Link to="/"><span className="sr-only">(current)</span>
-                      <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; About
+                      <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Home
                     </Link>
                   </li>
                   <li className="">
                     <Link to="/example"><span className="sr-only">(current)</span>
-                      <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Porfolio
+                      <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Projects
                     </Link>
                   </li>
                   <li className="">
                     <Link to="/example"><span className="sr-only">(current)</span>
-                      <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp; Contact
+                      <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp; Resume
                     </Link>
                   </li>
                 </ul>
@@ -67,9 +67,9 @@ function App({ children, routes }) {
             </div>
           </nav>
          </div >
-      {children}
-    </div>
-  );
-}
+        <InboxPane/>
+      </div>
+    );
+  }
 
 export default App;
