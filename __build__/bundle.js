@@ -26703,7 +26703,7 @@
 	        )
 	      )
 	    ),
-	    _react2.default.createElement(InboxPane, null)
+	    children
 	  );
 	}
 

@@ -67,9 +67,9 @@ function App({ children, routes }) {
             </div>
           </nav>
          </div >
-        <InboxPane/>
-      </div>
-    );
-  }
+      {children}
+    </div>
+  );
+}
 
 export default App;
