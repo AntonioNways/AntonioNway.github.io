@@ -26631,7 +26631,7 @@
 	                    '(current)'
 	                  ),
 	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-user', 'aria-hidden': 'true' }),
-	                  '\xA0 About'
+	                  '\xA0 Home'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -26646,7 +26646,7 @@
 	                    '(current)'
 	                  ),
 	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-folder-open', 'aria-hidden': 'true' }),
-	                  '\xA0 Porfolio'
+	                  '\xA0 Projects'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -26661,7 +26661,7 @@
 	                    '(current)'
 	                  ),
 	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope', 'aria-hidden': 'true' }),
-	                  '\xA0 Contact'
+	                  '\xA0 Resume'
 	                )
 	              )
 	            ),
@@ -26703,7 +26703,7 @@
 	        )
 	      )
 	    ),
-	    children
+	    _react2.default.createElement(InboxPane, null)
 	  );
 	}
 
@@ -26731,97 +26731,114 @@
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'nav_pad container' },
-	    _react2.default.createElement('div', { className: 'col-md-1' }),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'col-md-10' },
+	      { className: 'row' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'col-md-5' },
-	        _react2.default.createElement('img', { src: 'http://via.placeholder.com/300x400' })
+	        { className: 'col-md-12' },
+	        _react2.default.createElement('br', null)
 	      ),
+	      _react2.default.createElement('div', { className: 'col-md-1' }),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'col-md-7' },
+	        { className: 'col-md-10' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-12' },
 	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Antonio Ng'
+	            'div',
+	            { className: 'col-md-8 HomePicStyle' },
+	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/590x300', className: 'img-responsive ThemeSize' })
 	          ),
 	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            ' Acountant (CPA, CMA) and Programmer'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
-	          ),
-	          _react2.default.createElement('br', null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-4' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: '#' },
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/80x80' })
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            'React Apps'
+	            'div',
+	            { className: 'col-md-4 HomePicStyle' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/example' },
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/example' },
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/example' },
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	            )
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-4' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: '#' },
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/80x80' })
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            'Games'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-4' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: '#' },
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/80x80' })
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            'Apps'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'col-md-12' },
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'My Story'
 	        )
 	      )
 	    ),
-	    _react2.default.createElement('div', { className: 'col-md-1' })
+	    _react2.default.createElement(
+	      'div',
+	      { className: '' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-12' },
+	          _react2.default.createElement('div', { className: 'col-md-1' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-2' },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              'Antonio Ng'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              ' Acountant (CPA, CMA) and Programmer'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-4' },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'About Me'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
+	            ),
+	            _react2.default.createElement('br', null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-4' },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	              'center',
+	              null,
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                'History'
+	              )
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement('div', { className: 'col-md-1' })
+	    )
 	  );
 	}
 
