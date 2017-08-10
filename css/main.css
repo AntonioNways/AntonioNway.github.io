@@ -71,7 +71,7 @@ body{
   text-decoration:none;
 }
 .HomePicStyle{
-    padding-right: 3px;
+    padding-right: 1px;
     padding-left: 2px;
 }
 .ThemeSize{
@@ -84,4 +84,60 @@ body{
 .profileSize{
     height: 200px;
     width: 200px;
+}
+.HomeALR{
+    animation: mymoveALR .5s;
+    animation-timing-function: ease-in;
+}
+.HomeALR1{
+    animation: mymoveALR 1.5s;
+    animation-timing-function: ease-in;
+}
+.HomeARL{
+    animation: mymoveARL .75s;
+    animation-timing-function: ease-in;
+}
+.HomeARL1{
+    animation: mymoveARL 1s;
+    animation-timing-function: ease-in;
+}
+.HomeARL2{
+    animation: mymoveARL 1.2s;
+    animation-timing-function: ease-in;
+}
+.HomeARL3{
+    animation: mymoveARL 1.8s;
+    animation-timing-function: ease-in;
+}
+.HomeABT{
+    animation: mymoveABT 1.5s;
+    animation-timing-function: ease-in;
+}
+@keyframes mymoveALR {
+    from {left: -380px;}
+    to {left: 0px;}
+}
+@keyframes mymoveARL {
+    from {right: -380px;}
+    to {right: 0px;}
+}
+@keyframes mymoveABT {
+    from {bottom: -380px;}
+    to {bottom: 0px;}
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 98px;
+  height: auto;
+  min-height: 10px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: black;
+  border: 0px;
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: .5;
+  color: white;
 }

@@ -26748,26 +26748,38 @@
 	          { className: 'col-md-12' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-8 HomePicStyle' },
+	            { className: 'col-md-8 HomePicStyle HomeALR' },
 	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/590x300', className: 'img-responsive ThemeSize' })
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-4 HomePicStyle' },
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/example' },
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              'div',
+	              { className: 'col-md-12 HomePicStyle HomeARL' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/example' },
+	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              )
 	            ),
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/example' },
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              'div',
+	              { className: 'col-md-12 HomePicStyle HomeARL1' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/example' },
+	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              )
 	            ),
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/example' },
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              'div',
+	              { className: 'col-md-12 HomePicStyle HomeARL2' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/example' },
+	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	              )
 	            )
 	          )
 	        )
@@ -26785,7 +26797,9 @@
 	          _react2.default.createElement('div', { className: 'col-md-1' }),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-2' },
+	            { className: 'col-md-2 HomeALR1' },
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
 	            _react2.default.createElement(
@@ -26801,7 +26815,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-4' },
+	            { className: 'col-md-4 HomeABTqu' },
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'h1',
@@ -26823,7 +26837,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-4' },
+	            { className: 'col-md-4 HomeARL3' },
 	            _react2.default.createElement('br', null),
 	            _react2.default.createElement(
 	              'center',
@@ -26833,6 +26847,12 @@
 	                null,
 	                'History'
 	              )
+	            ),
+	            _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
+	            _react2.default.createElement(
+	              'svg',
+	              { width: '350', height: '400' },
+	              _react2.default.createElement('line', { x1: xSpac + 25, y1: '55', x2: xSpac * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
 	            )
 	          )
 	        )
