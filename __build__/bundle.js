@@ -26727,9 +26727,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017, "Obtained FreeCodeCamp Certificate"]];
-	var xSpac = 10;
-
 	function Home() {
 	  return _react2.default.createElement(
 	    'div',
@@ -26855,7 +26852,7 @@
 	            _react2.default.createElement(
 	              'svg',
 	              { width: '350', height: '400' },
-	              _react2.default.createElement('line', { x1: xSpac + 25, y1: '55', x2: xSpac * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
+	              _react2.default.createElement('line', { x1: 10 + 25, y1: '55', x2: 10 * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
 	            )
 	          )
 	        )

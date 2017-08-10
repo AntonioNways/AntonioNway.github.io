@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-var TimeLineData=[[2012,"B.B.A. Graduate with Distinction"],
-[2013,"Work as Account Payable"],[2014, "Promoted to Staff Accountant"],[2015,"Becomes CPA,CMA"], 
-[2016,"Explore Programming"],[2017,"Obtained FreeCodeCamp Certificate"]]
-var xSpac=10;
 
 function Home() {
   return (
@@ -51,7 +47,7 @@ function Home() {
             <center><h3>History</h3></center>
             <div className="tooltip" id="tooltip"></div>
             <svg width="350" height="400">
-              <line x1={xSpac+25} y1="55" x2={xSpac*6+25} y2="330" stroke-width="3" stroke="black"/>
+              <line x1={10+25} y1="55" x2={10*6+25} y2="330" stroke-width="3" stroke="black"/>
             </svg>
           </div>
         </div>
