@@ -26727,6 +26727,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017, "Obtained FreeCodeCamp Certificate"]];
+	var xSpac = 10;
+
 	function Home() {
 	  return _react2.default.createElement(
 	    'div',
