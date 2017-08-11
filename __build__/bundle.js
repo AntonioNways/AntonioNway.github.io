@@ -26879,7 +26879,7 @@
 	              _react2.default.createElement(
 	                'svg',
 	                { width: '350', height: '400' },
-	                _react2.default.createElement('line', { x1: xSpac + 25, y1: '55', x2: xSpac * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
+	                _react2.default.createElement('line', { x1: 10 + 25, y1: '55', x2: 10 * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
 	              )
 	            )
 	          )
