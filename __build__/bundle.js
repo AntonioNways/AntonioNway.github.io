@@ -26735,20 +26735,20 @@
 	    }
 	  },
 	  renderSVG: function renderSVG() {
-	    var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017, "Obtained FreeCodeCamp Certificate"]];
-	    var xSpac = 10;
+	    var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017.25, "March - Resign as an Accountant to pursue Programing"], [2017.43, "May - Obtained FCC's Front-end Development Certificate"], [2017.56, "July - Obtained FCC's Data-Visualization Certificate"]];
+	    var xSpac = 12;
 	    var svg = d3.select("svg");
 	    var g = svg.append("g");
 	    var toolT = d3.select("#tooltip").style("opacity", 0);
-	    g.selectAll("circle").data(TimeLineData).enter().append("circle").style("opacity", 1).attr("cx", function (d, i) {
+	    g.selectAll("circle").data(TimeLineData).enter().append("circle").style("opacity", 1).attr("class", "HoverTL").attr("cx", function (d, i) {
 	      return (d[0] - 2011) * xSpac + 25;
 	    }).attr("cy", function (d, i) {
 	      return (d[0] - 2011) * 55;
-	    }).attr("r", 5).attr("fill", "green").attr("stroke", "white").attr("stroke-width", "0.3")
+	    }).attr("r", 5).attr("fill", "blue").attr("stroke", "brown").attr("stroke-width", "0.3")
 	    //tooltip function here
 	    .on("mouseover", function (d, i) {
 	      toolT.transition().duration(300).style("opacity", .9);
-	      toolT.html(d[0] + " - " + d[1]).style("left", d3.event.pageX - 650 + "px").style("top", d3.event.pageY - 420 + "px");
+	      toolT.html("<center>" + d[0].toString().substring(0, 4) + " - " + d[1] + "</center>").style("left", Number(d3.select(this).attr("cx")) + 55 + "px").style("top", Number(d3.select(this).attr("cy")) + 60 + "px");
 	    }).on("mouseout", function (d) {
 	      toolT.transition().duration(500).style("opacity", 0);
 	    });
@@ -26757,7 +26757,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'nav_pad container' },
+	      { className: 'nav_pad container-fluid' },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
@@ -26776,7 +26776,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-md-8 HomePicStyle HomeALR' },
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/590x300', className: 'img-responsive ThemeSize' })
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' })
 	            ),
 	            _react2.default.createElement(
 	              'div',
@@ -26879,7 +26879,7 @@
 	              _react2.default.createElement(
 	                'svg',
 	                { width: '350', height: '400' },
-	                _react2.default.createElement('line', { x1: 10 + 25, y1: '55', x2: 10 * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
+	                _react2.default.createElement('line', { x1: 12 + 25, y1: '55', x2: 12 * 6.56 + 25, y2: 55 * 6.56, stroke: 'black' })
 	              )
 	            )
 	          )

@@ -76,7 +76,7 @@ body{
 }
 .ThemeSize{
     height: 301px;
-    width: 610px;
+    width: 100%;
 }
 .HomeAppSize{
   padding-bottom: 5px;
@@ -129,9 +129,9 @@ body{
 div.tooltip {
   position: absolute;
   text-align: center;
-  width: 98px;
+  width: 110px;
   height: auto;
-  min-height: 10px;
+  min-height: 30px;
   padding: 2px;
   font: 12px sans-serif;
   background: black;
@@ -140,4 +140,8 @@ div.tooltip {
   pointer-events: none;
   opacity: .5;
   color: white;
+}
+.HoverTL:hover {
+  fill: brown;
+  cursor: pointer;
 }

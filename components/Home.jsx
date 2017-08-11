@@ -9,8 +9,8 @@ var Home = React.createClass({
   renderSVG(){
     var TimeLineData=[[2012,"B.B.A. Graduate with Distinction"],
 [2013,"Work as Account Payable"],[2014, "Promoted to Staff Accountant"],[2015,"Becomes CPA,CMA"], 
-[2016,"Explore Programming"],[2017,"Obtained FreeCodeCamp Certificate"]]
-    var xSpac=10;
+[2016,"Explore Programming"],[2017.25,"March - Resign as an Accountant to pursue Programing"],[2017.43,"May - Obtained FCC's Front-end Development Certificate"],[2017.56,"July - Obtained FCC's Data-Visualization Certificate"]]
+    var xSpac=12;
     var svg=d3.select("svg");
     var g = svg.append("g");
     var toolT=d3.select("#tooltip").style("opacity",0);
@@ -19,6 +19,7 @@ var Home = React.createClass({
       .enter()
       .append("circle")
       .style("opacity", 1)
+      .attr("class", "HoverTL")
       .attr("cx",function(d,i){
         return (d[0]-2011)*xSpac+25;
       })
@@ -26,17 +27,17 @@ var Home = React.createClass({
         return (d[0]-2011)*55;
       })
       .attr("r", 5)
-      .attr("fill","green")
-      .attr("stroke","white")
+      .attr("fill","blue")
+      .attr("stroke","brown")
       .attr("stroke-width", "0.3")
       //tooltip function here
       .on("mouseover", function(d,i) {
        toolT.transition()
          .duration(300)
          .style("opacity", .9);
-       toolT.html(d[0]+" - "+d[1])
-         .style("left", (d3.event.pageX)-650 + "px")
-         .style("top", (d3.event.pageY)-420 + "px");
+       toolT.html("<center>"+d[0].toString().substring(0,4)+" - "+d[1]+"</center>")
+         .style("left", Number(d3.select(this).attr("cx"))+55 + "px")
+         .style("top", Number(d3.select(this).attr("cy"))+60 + "px");
        })
      .on("mouseout", function(d) {
        toolT.transition()
@@ -46,14 +47,14 @@ var Home = React.createClass({
   },
   render : function() {
     return (
-    <div className="nav_pad container">
+    <div className="nav_pad container-fluid">
       <div className="row">
         <div className="col-md-12"><br></br></div>
         <div className="col-md-1"></div>
         <div className="col-md-10">
         <div className="col-md-12">
           <div className="col-md-8 HomePicStyle HomeALR">
-            <img src="http://via.placeholder.com/590x300" className="img-responsive ThemeSize"/>
+            <img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/>
           </div>
           <div className="col-md-4 HomePicStyle">
               <div className="col-md-12 HomePicStyle HomeARL"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
@@ -89,7 +90,7 @@ var Home = React.createClass({
             <center><h3>History</h3></center>
             <div className="tooltip" id="tooltip"></div>
             <svg width="350" height="400">
-              <line x1={10+25} y1="55" x2={10*6+25} y2="330" stroke-width="3" stroke="black"/>
+              <line x1={12+25} y1="55" x2={12*6.56+25} y2={55*6.56} stroke="black"/>
             </svg>
           </div>
         </div>
