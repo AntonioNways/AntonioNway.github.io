@@ -2,8 +2,50 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-function Home() {
-  return (
+var Home = React.createClass({
+  componentDidMount(){
+    {this.renderSVG()}
+  },
+  renderSVG(){
+    var TimeLineData=[[2012,"B.B.A. Graduate with Distinction"],
+[2013,"Work as Account Payable"],[2014, "Promoted to Staff Accountant"],[2015,"Becomes CPA,CMA"], 
+[2016,"Explore Programming"],[2017,"Obtained FreeCodeCamp Certificate"]]
+    var xSpac=10;
+    var svg=d3.select("svg");
+    var g = svg.append("g");
+    var toolT=d3.select("#tooltip").style("opacity",0);
+    g.selectAll("circle")
+      .data(TimeLineData)
+      .enter()
+      .append("circle")
+      .style("opacity", 1)
+      .attr("cx",function(d,i){
+        return (d[0]-2011)*xSpac+25;
+      })
+      .attr("cy",function(d,i){
+        return (d[0]-2011)*55;
+      })
+      .attr("r", 5)
+      .attr("fill","green")
+      .attr("stroke","white")
+      .attr("stroke-width", "0.3")
+      //tooltip function here
+      .on("mouseover", function(d,i) {
+       toolT.transition()
+         .duration(300)
+         .style("opacity", .9);
+       toolT.html(d[0]+" - "+d[1])
+         .style("left", (d3.event.pageX)-650 + "px")
+         .style("top", (d3.event.pageY)-420 + "px");
+       })
+     .on("mouseout", function(d) {
+       toolT.transition()
+         .duration(500)
+         .style("opacity", 0);
+       });
+  },
+  render : function() {
+    return (
     <div className="nav_pad container">
       <div className="row">
         <div className="col-md-12"><br></br></div>
@@ -47,7 +89,7 @@ function Home() {
             <center><h3>History</h3></center>
             <div className="tooltip" id="tooltip"></div>
             <svg width="350" height="400">
-              <line x1={10+25} y1="55" x2={10*6+25} y2="330" stroke-width="3" stroke="black"/>
+              <line x1={xSpac+25} y1="55" x2={xSpac*6+25} y2="330" stroke-width="3" stroke="black"/>
             </svg>
           </div>
         </div>
@@ -56,6 +98,7 @@ function Home() {
       </div>
     </div>
   );
-}
+  }
+});
 
 export default Home;

@@ -26727,140 +26727,168 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function Home() {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'nav_pad container' },
-	    _react2.default.createElement(
+	var Home = _react2.default.createClass({
+	  displayName: 'Home',
+	  componentDidMount: function componentDidMount() {
+	    {
+	      this.renderSVG();
+	    }
+	  },
+	  renderSVG: function renderSVG() {
+	    var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017, "Obtained FreeCodeCamp Certificate"]];
+	    var xSpac = 10;
+	    var svg = d3.select("svg");
+	    var g = svg.append("g");
+	    var toolT = d3.select("#tooltip").style("opacity", 0);
+	    g.selectAll("circle").data(TimeLineData).enter().append("circle").style("opacity", 1).attr("cx", function (d, i) {
+	      return (d[0] - 2011) * xSpac + 25;
+	    }).attr("cy", function (d, i) {
+	      return (d[0] - 2011) * 55;
+	    }).attr("r", 5).attr("fill", "green").attr("stroke", "white").attr("stroke-width", "0.3")
+	    //tooltip function here
+	    .on("mouseover", function (d, i) {
+	      toolT.transition().duration(300).style("opacity", .9);
+	      toolT.html(d[0] + " - " + d[1]).style("left", d3.event.pageX - 650 + "px").style("top", d3.event.pageY - 420 + "px");
+	    }).on("mouseout", function (d) {
+	      toolT.transition().duration(500).style("opacity", 0);
+	    });
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
 	      'div',
-	      { className: 'row' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'col-md-12' },
-	        _react2.default.createElement('br', null)
-	      ),
-	      _react2.default.createElement('div', { className: 'col-md-1' }),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'col-md-10' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-12' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-8 HomePicStyle HomeALR' },
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/590x300', className: 'img-responsive ThemeSize' })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-4 HomePicStyle' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-12 HomePicStyle HomeARL' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/example' },
-	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-12 HomePicStyle HomeARL1' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/example' },
-	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-12 HomePicStyle HomeARL2' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/example' },
-	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
-	              )
-	            )
-	          )
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: '' },
+	      { className: 'nav_pad container' },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'row' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-12' },
-	          _react2.default.createElement('div', { className: 'col-md-1' }),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement('div', { className: 'col-md-1' }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-10' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-2 HomeALR1' },
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	            { className: 'col-md-12' },
 	            _react2.default.createElement(
-	              'h2',
-	              null,
-	              'Antonio Ng'
+	              'div',
+	              { className: 'col-md-8 HomePicStyle HomeALR' },
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/590x300', className: 'img-responsive ThemeSize' })
 	            ),
 	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              ' Acountant (CPA, CMA) and Programmer'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-4 HomeABTqu' },
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'About Me'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              null,
-	              'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
-	            ),
-	            _react2.default.createElement('br', null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-4 HomeARL3' },
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'center',
-	              null,
+	              'div',
+	              { className: 'col-md-4 HomePicStyle' },
 	              _react2.default.createElement(
-	                'h3',
-	                null,
-	                'History'
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL1' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL2' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
 	              )
-	            ),
-	            _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
-	            _react2.default.createElement(
-	              'svg',
-	              { width: '350', height: '400' },
-	              _react2.default.createElement('line', { x1: 10 + 25, y1: '55', x2: 10 * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
 	            )
 	          )
 	        )
 	      ),
-	      _react2.default.createElement('div', { className: 'col-md-1' })
-	    )
-	  );
-	}
+	      _react2.default.createElement(
+	        'div',
+	        { className: '' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement('div', { className: 'col-md-1' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-2 HomeALR1' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Antonio Ng'
+	              ),
+	              _react2.default.createElement(
+	                'h4',
+	                null,
+	                ' Acountant (CPA, CMA) and Programmer'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4 HomeABTqu' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'About Me'
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
+	              ),
+	              _react2.default.createElement('br', null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4 HomeARL3' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'center',
+	                null,
+	                _react2.default.createElement(
+	                  'h3',
+	                  null,
+	                  'History'
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
+	              _react2.default.createElement(
+	                'svg',
+	                { width: '350', height: '400' },
+	                _react2.default.createElement('line', { x1: xSpac + 25, y1: '55', x2: xSpac * 6 + 25, y2: '330', 'stroke-width': '3', stroke: 'black' })
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('div', { className: 'col-md-1' })
+	      )
+	    );
+	  }
+	});
 
 	exports.default = Home;
 
