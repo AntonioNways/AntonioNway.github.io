@@ -42,7 +42,7 @@ function App({ children, routes }) {
                     </Link>
                   </li>
                   <li className="">
-                    <Link to="/example"><span className="sr-only">(current)</span>
+                    <Link to="/projects"><span className="sr-only">(current)</span>
                       <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Projects
                     </Link>
                   </li>

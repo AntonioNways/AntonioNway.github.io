@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
 import Home from './components/Home';
+import Projects from './components/Projects';
 import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
@@ -85,6 +86,8 @@ const routes = (
   // onEnter hook checks if a redirect is needed before App component is loaded
   <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
     <IndexRoute component={Home} /> // pass the component as a child
+
+    <Route path="projects" mapMenuTitle="Projects" component={Projects}/>
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />

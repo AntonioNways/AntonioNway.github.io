@@ -62,15 +62,19 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _PageNotFound = __webpack_require__(235);
+	var _Projects = __webpack_require__(235);
+
+	var _Projects2 = _interopRequireDefault(_Projects);
+
+	var _PageNotFound = __webpack_require__(236);
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _ExampleComponent = __webpack_require__(236);
+	var _ExampleComponent = __webpack_require__(237);
 
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 
-	var _ExampleTwoDeepComponent = __webpack_require__(237);
+	var _ExampleTwoDeepComponent = __webpack_require__(238);
 
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 
@@ -157,6 +161,7 @@
 	  { path: '/', mapMenuTitle: 'Home', component: _App2.default, onEnter: checkForRedirect },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
+	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: 'example', mapMenuTitle: 'Example', component: _ExampleComponent2.default },
@@ -26639,7 +26644,7 @@
 	                { className: '' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
-	                  { to: '/example' },
+	                  { to: '/projects' },
 	                  _react2.default.createElement(
 	                    'span',
 	                    { className: 'sr-only' },
@@ -26906,6 +26911,189 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(170);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Projects = _react2.default.createClass({
+	  displayName: 'Projects',
+	  componentDidMount: function componentDidMount() {
+	    {
+	      this.renderSVG();
+	    }
+	  },
+	  renderSVG: function renderSVG() {
+	    var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017.25, "March - Resign as an Accountant to pursue Programing"], [2017.43, "May - Obtained FCC's Front-end Development Certificate"], [2017.56, "July - Obtained FCC's Data-Visualization Certificate"]];
+	    var xSpac = 12;
+	    var svg = d3.select("svg");
+	    var g = svg.append("g");
+	    var toolT = d3.select("#tooltip").style("opacity", 0);
+	    g.selectAll("circle").data(TimeLineData).enter().append("circle").style("opacity", 1).attr("class", "HoverTL").attr("cx", function (d, i) {
+	      return (d[0] - 2011) * xSpac + 25;
+	    }).attr("cy", function (d, i) {
+	      return (d[0] - 2011) * 55;
+	    }).attr("r", 5).attr("fill", "blue").attr("stroke", "brown").attr("stroke-width", "0.3")
+	    //tooltip function here
+	    .on("mouseover", function (d, i) {
+	      toolT.transition().duration(300).style("opacity", .9);
+	      toolT.html("<center>" + d[0].toString().substring(0, 4) + " - " + d[1] + "</center>").style("left", Number(d3.select(this).attr("cx")) + 55 + "px").style("top", Number(d3.select(this).attr("cy")) + 60 + "px");
+	    }).on("mouseout", function (d) {
+	      toolT.transition().duration(500).style("opacity", 0);
+	    });
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'nav_pad container-fluid' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-12' },
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement('div', { className: 'col-md-1' }),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-10' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-8 HomePicStyle HomeALR' },
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4 HomePicStyle' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL1' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-12 HomePicStyle HomeARL2' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/example' },
+	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                )
+	              )
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: '' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement('div', { className: 'col-md-1' }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-2 HomeALR1' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	              _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Antonio Ng'
+	              ),
+	              _react2.default.createElement(
+	                'h4',
+	                null,
+	                ' Acountant (CPA, CMA) and Programmer'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4 HomeABTqu' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'About Me'
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
+	              ),
+	              _react2.default.createElement('br', null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-4 HomeARL3' },
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement(
+	                'center',
+	                null,
+	                _react2.default.createElement(
+	                  'h3',
+	                  null,
+	                  'History'
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
+	              _react2.default.createElement(
+	                'svg',
+	                { width: '350', height: '400' },
+	                _react2.default.createElement('line', { x1: 12 + 25, y1: '55', x2: 12 * 6.56 + 25, y2: 55 * 6.56, stroke: 'black' })
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('div', { className: 'col-md-1' })
+	      )
+	    );
+	  }
+	});
+
+	exports.default = Projects;
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function PageNotFound(_ref) {
@@ -26923,7 +27111,7 @@
 	exports.default = PageNotFound;
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26966,7 +27154,7 @@
 	exports.default = ExampleComponent;
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
