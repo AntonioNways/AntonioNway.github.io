@@ -177,7 +177,6 @@
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
 	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', mapMenuTitle: 'Page Not Found', component: _PageNotFound2.default })
 	);
 
