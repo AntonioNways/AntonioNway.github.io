@@ -176,7 +176,11 @@
 	  { path: '/', mapMenuTitle: 'Home', component: _App2.default, onEnter: checkForRedirect },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
-	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat0 },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData })
+	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: 'example', mapMenuTitle: 'Example', component: _ExampleComponent2.default },

@@ -99,7 +99,9 @@ const routes = (
     <IndexRoute component={Home} /> // pass the component as a child
 
 
-    <Route path="projects" mapMenuTitle="Projects" component={Projects}/>
+    <Route path="projects" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat0}>
+      <IndexRoute component={ProjectPane} ProjectData={ProjectData}/>
+    </Route>
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
