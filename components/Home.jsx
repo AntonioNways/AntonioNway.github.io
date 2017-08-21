@@ -54,7 +54,7 @@ var Home = React.createClass({
         <div className="col-md-10">
         <div className="col-md-12">
           <div className="col-md-8 HomePicStyle">
-            <Link to="/projects"> <img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/></Link>
+             <Link to="/projects"><img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/> </Link>
           </div>
           <div className="col-md-4 HomePicStyle">
               <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>

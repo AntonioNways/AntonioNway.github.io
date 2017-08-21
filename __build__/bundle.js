@@ -177,6 +177,11 @@
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
 	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'example', mapMenuTitle: 'Example', component: _ExampleComponent2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'two-deep', mapMenuTitle: 'Two Deep', component: _ExampleTwoDeepComponent2.default })
+	  ),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', mapMenuTitle: 'Page Not Found', component: _PageNotFound2.default })
 	);
 
@@ -26794,8 +26799,8 @@
 	              _react2.default.createElement(
 	                _reactRouter.Link,
 	                { to: '/projects' },
-	                ' ',
-	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' })
+	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' }),
+	                ' '
 	              )
 	            ),
 	            _react2.default.createElement(
