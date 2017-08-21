@@ -176,7 +176,8 @@
 	  { path: '/', mapMenuTitle: 'Home', component: _App2.default, onEnter: checkForRedirect },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
-	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat0 }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', mapMenuTitle: 'Page Not Found', component: _PageNotFound2.default })
 	);
 
@@ -26790,15 +26791,20 @@
 	            { className: 'col-md-12' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-8 HomePicStyle HomeALR' },
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' })
+	              { className: 'col-md-8 HomePicStyle' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/projects' },
+	                ' ',
+	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' })
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'col-md-4 HomePicStyle' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeARL' },
+	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/example' },
@@ -26807,7 +26813,7 @@
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeARL1' },
+	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/example' },
@@ -26816,7 +26822,7 @@
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeARL2' },
+	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/example' },
@@ -26839,7 +26845,7 @@
 	            _react2.default.createElement('div', { className: 'col-md-1' }),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-2 HomeALR1' },
+	              { className: 'col-md-2 HomeALR' },
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('br', null),
@@ -26857,7 +26863,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-4 HomeABTqu' },
+	              { className: 'col-md-4' },
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement(
 	                'h1',
@@ -26879,7 +26885,7 @@
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-4 HomeARL3' },
+	              { className: 'col-md-4 HomeARL' },
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement(
 	                'center',

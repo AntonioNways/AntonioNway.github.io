@@ -53,13 +53,13 @@ var Home = React.createClass({
         <div className="col-md-1"></div>
         <div className="col-md-10">
         <div className="col-md-12">
-          <div className="col-md-8 HomePicStyle HomeALR">
-            <img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/>
+          <div className="col-md-8 HomePicStyle">
+            <Link to="/projects"> <img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/></Link>
           </div>
           <div className="col-md-4 HomePicStyle">
-              <div className="col-md-12 HomePicStyle HomeARL"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle HomeARL1"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle HomeARL2"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
           </div>
         </div>
         </div>
@@ -68,7 +68,7 @@ var Home = React.createClass({
       <div className="row">
         <div className="col-md-12">
           <div className="col-md-1"></div>
-          <div className="col-md-2 HomeALR1">
+          <div className="col-md-2 HomeALR">
             <br></br>
             <br></br>
             <br></br>
@@ -76,7 +76,7 @@ var Home = React.createClass({
             <h2>Antonio Ng</h2>  
             <h4> Acountant (CPA, CMA) and Programmer</h4>
           </div>
-          <div className="col-md-4 HomeABTqu">
+          <div className="col-md-4">
             <br></br>
           <h1>About Me</h1>
           
@@ -85,7 +85,7 @@ var Home = React.createClass({
                 <p>I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!</p>
                 <br></br>
           </div>
-          <div className="col-md-4 HomeARL3">
+          <div className="col-md-4 HomeARL">
             <br></br>
             <center><h3>History</h3></center>
             <div className="tooltip" id="tooltip"></div>

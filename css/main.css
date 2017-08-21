@@ -145,3 +145,12 @@ div.tooltip {
   fill: brown;
   cursor: pointer;
 }
+.ProjNavPad{
+    padding-top: 180px;
+}
+.ProjNavPadData{
+    padding-top: 100px;
+}
+.projectPicPad{
+    margin-bottom: 10px;
+}

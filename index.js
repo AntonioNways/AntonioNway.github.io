@@ -98,8 +98,8 @@ const routes = (
   <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
     <IndexRoute component={Home} /> // pass the component as a child
 
-    <Route path="projects" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat0}/>
-
+    <Route path="projects" mapMenuTitle="Projects" component={Projects}/>
+      <IndexRoute component={ProjectPane} ProjectData={ProjectData}/>
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
