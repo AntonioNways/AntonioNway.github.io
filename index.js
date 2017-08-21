@@ -10,6 +10,16 @@ import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 
+///DATA to pass down to Children////
+var ProjectData= {"Dungeon Crawler":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzanZKbEJidURrM1E","link":"https://codepen.io/SilverAnt/full/PjVyLB/","detail": "A basic Dungeon Crawler game. Instructions: Travel the Dungeon an beat the boss in Dungeon level 4. (Note: Blue = Player, Red = enemy, Green = HP, Yellow = Weopen Upgrade, Purple = Move to next Dungeon)","type":"React" },
+"Game of Life":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzNUl0cE9JV2EyMzg","link":"https://codepen.io/SilverAnt/full/yXjEKx/","detail": "A simple game with where you can click on a cell to turn it alive or dead. After each generation, the cells will either reproduce or die. For more rules of the game, please refer to https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life","type":"React" }, 
+"Tic Tac Toe":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzOUM3ZnVvaXZQZDQ","link":"https://codepen.io/SilverAnt/full/EWOWvN/","detail": "A basic Tic Tac Toe game","type":"Other" },
+"Simon's Game":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzY2ZEWmh6YTN6MjQ","link":"https://codepen.io/SilverAnt/full/JNERyJ/","detail": "A basic game to test your memory. Try to repeat the pattern given by the computer","type":"Other" },
+"Force Directed Graph":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzMFFqREFfT2t1eFU","link":"https://codepen.io/SilverAnt/full/wqvKrz/","detail": "An interactive Force Directed Graph that connects countries by their borders. For fun, you can drag a country map around and view the effect on its neighbouring countries.","type":"D3" },
+"Visualize Data with a Scatterplot Graph":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdk8tazBid00tMVE","link":"https://codepen.io/SilverAnt/full/qjzGPQ/","detail": "An interactive scatterplot graph that shows the doping allegations of professional bicycle racing","type":"D3" },
+"Calculator":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcl9CWEt0enBtR1k","link":"https://codepen.io/SilverAnt/full/XMEREj/","detail": "A simple calculator App.","type":"Other" }
+}
+var allTabStat0={"allTabStat":["none","active","none","none"]}
 
 ///////////////////////////////////////////////////////////////////////////////
 // React for GitHub Pages - https://github.com/rafrex/react-github-pages
@@ -88,14 +98,8 @@ const routes = (
   <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
     <IndexRoute component={Home} /> // pass the component as a child
 
+    <Route path="projects" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat0}/>
 
-    <Route path="project" mapMenuTitle="Projects component={Projects} allTabStat={{"allTabStat":["active","none","none","none"]}}>
-      <IndexRoute component={ProjectPane} />
-    </Route> 
-
-    <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
-      <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
-    </Route>
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
