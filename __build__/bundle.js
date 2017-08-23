@@ -78,15 +78,19 @@
 
 	var _SelReact2 = _interopRequireDefault(_SelReact);
 
-	var _PageNotFound = __webpack_require__(239);
+	var _SelD = __webpack_require__(239);
+
+	var _SelD2 = _interopRequireDefault(_SelD);
+
+	var _PageNotFound = __webpack_require__(240);
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _ExampleComponent = __webpack_require__(240);
+	var _ExampleComponent = __webpack_require__(241);
 
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 
-	var _ExampleTwoDeepComponent = __webpack_require__(241);
+	var _ExampleTwoDeepComponent = __webpack_require__(242);
 
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 
@@ -201,6 +205,11 @@
 	    _reactRouter.Route,
 	    { path: 'projects/react', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat2 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelReact2.default, ProjectData: ProjectData })
+	  ),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'projects/d3', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat3 },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelD2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
@@ -27227,6 +27236,68 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(170);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SelD3 = _react2.default.createClass({
+	  displayName: 'SelD3',
+
+	  renderAllList: function renderAllList(val, x) {
+	    if (this.props.route.ProjectData[val].type == "D3") {
+	      return _react2.default.createElement(
+	        'div',
+	        { key: val, id: val, className: 'col-sm-12' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-4 projectPicPad' },
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: this.props.route.ProjectData[val].link },
+	            _react2.default.createElement('img', { alt: val, src: this.props.route.ProjectData[val].img, className: 'img-responsive' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-8' },
+	          _react2.default.createElement(
+	            'h4',
+	            null,
+	            val
+	          ),
+	          this.props.route.ProjectData[val].detail
+	        )
+	      );
+	    } else {
+	      return;
+	    }
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      Object.keys(this.props.route.ProjectData).map(this.renderAllList)
+	    );
+	  }
+	});
+
+	exports.default = SelD3;
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function PageNotFound(_ref) {
@@ -27244,7 +27315,7 @@
 	exports.default = PageNotFound;
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27287,7 +27358,7 @@
 	exports.default = ExampleComponent;
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
