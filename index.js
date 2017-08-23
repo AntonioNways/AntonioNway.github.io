@@ -11,6 +11,8 @@ import SelBasic from './components/SelBasic';
 import SelReact from './components/SelReact';
 import SelD3 from './components/SelD3';
 
+import resumePane from './components/resumePane';
+
 import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
@@ -120,9 +122,7 @@ const routes = (
       <IndexRoute component={SelD3} ProjectData={ProjectData}/>
     </Route>
 
-
-    <Route path="example"  component={ExampleComponent}>
-      <Route path="two-deep"  component={ExampleTwoDeepComponent} />
+    <Route path="resume" component={resumePane}>
     </Route>
 
     <Route path="*" component={PageNotFound} />

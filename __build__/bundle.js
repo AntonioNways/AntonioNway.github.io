@@ -82,15 +82,19 @@
 
 	var _SelD2 = _interopRequireDefault(_SelD);
 
-	var _PageNotFound = __webpack_require__(240);
+	var _resumePane = __webpack_require__(240);
+
+	var _resumePane2 = _interopRequireDefault(_resumePane);
+
+	var _PageNotFound = __webpack_require__(241);
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _ExampleComponent = __webpack_require__(241);
+	var _ExampleComponent = __webpack_require__(242);
 
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 
-	var _ExampleTwoDeepComponent = __webpack_require__(242);
+	var _ExampleTwoDeepComponent = __webpack_require__(243);
 
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 
@@ -211,11 +215,7 @@
 	    { path: 'projects/d3', component: _Projects2.default, allTabStat: allTabStat3 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelD2.default, ProjectData: ProjectData })
 	  ),
-	  _react2.default.createElement(
-	    _reactRouter.Route,
-	    { path: 'example', component: _ExampleComponent2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'two-deep', component: _ExampleTwoDeepComponent2.default })
-	  ),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _resumePane2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _PageNotFound2.default })
 	);
 
@@ -27333,6 +27333,38 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(170);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var resumePane = _react2.default.createClass({
+	  displayName: 'resumePane',
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'col-sm-4 ProjNavPadData' },
+	      'TESTSTESTSTSE'
+	    );
+	  }
+	});
+
+	exports.default = resumePane;
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function PageNotFound(_ref) {
@@ -27350,7 +27382,7 @@
 	exports.default = PageNotFound;
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27393,7 +27425,7 @@
 	exports.default = ExampleComponent;
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
