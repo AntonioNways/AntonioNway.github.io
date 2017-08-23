@@ -103,29 +103,29 @@ function redirectToDomain() {
 
 const routes = (
   // onEnter hook checks if a redirect is needed before App component is loaded
-  <Route path="/" mapMenuTitle="Home" component={App} onEnter={checkForRedirect}>
+  <Route path="/"  component={App} onEnter={checkForRedirect}>
     <IndexRoute component={Home} /> // pass the component as a child
 
 
-    <Route path="projects" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat0}>
+    <Route path="projects"  component={Projects} allTabStat={allTabStat0}>
       <IndexRoute component={ProjectPane} ProjectData={ProjectData}/>
     </Route>
-    <Route path="projects/basic" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat1}>
+    <Route path="projects/basic"  component={Projects} allTabStat={allTabStat1}>
       <IndexRoute component={SelBasic} ProjectData={ProjectData}/>
     </Route>
-    <Route path="projects/react" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat2}>
+    <Route path="projects/react"  component={Projects} allTabStat={allTabStat2}>
       <IndexRoute component={SelReact} ProjectData={ProjectData}/>
     </Route>
-    <Route path="projects/d3" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat3}>
+    <Route path="projects/d3" component={Projects} allTabStat={allTabStat3}>
       <IndexRoute component={SelD3} ProjectData={ProjectData}/>
     </Route>
 
 
-    <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
-      <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
+    <Route path="example"  component={ExampleComponent}>
+      <Route path="two-deep"  component={ExampleTwoDeepComponent} />
     </Route>
 
-    <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
+    <Route path="*" component={PageNotFound} />
   </Route>
 );
 

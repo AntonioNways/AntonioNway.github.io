@@ -1,30 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-function App({ children, routes }) {
-
-  function generateMapMenu() {
-    let path = '';
-    return (
-      routes.filter(route => route.mapMenuTitle)
-        .map((route, index, array) => (
-          <span key={index}>
-            <Link
-              to={path += ((path.slice(-1) === '/' ? '' : '/') +
-                  (route.path === '/' ? '' : route.path))}
-            >
-              {route.mapMenuTitle}
-            </Link>
-            {(index + 1) < array.length && ' / '}
-          </span>
-        ))
-    );
-  }
-
+var App = React.createClass({
+  getInitialState: function() {
+    return { 
+      "navState": "active",
+      "ProfState": "NavInvis",
+      "ChildPad":"",
+      "allTabStat":["active","none","none","none"]
+    };
+  },
+  componentWillReceiveProps(){
+    if (this.props.routes[this.props.routes.length - 1]["component"]["displayName"]=="resumePane"){
+      this.setState({ "navState": "active",
+                        "ChildPad":"",
+                       "ProfState": "NavInvis"});
+    }
+  },
+  componentWillMount(){
+    if (this.props.routes[this.props.routes.length - 1]["component"]["displayName"]=="resumePane"){
+      this.setState({ "navState": "NavInvis",
+                    "ChildPad":"RightColRes",
+                     "ProfState": "active"});
+    }
+    else{
+      this.setState({ "navState": "active",
+                        "ChildPad":"",
+                      "ProfState": "NavInvis"});
+    }
+  },
+  hideNav:function(){
+    console.log("Test");
+    this.setState({ "navState": "NavInvis",
+                    "ChildPad":"RightColRes",
+                      "ProfState": "active"});
+  },
+  render: function() {
   return(
-    <div>
+      <div>
         <div id="NavBar">
-        <nav className="navbar navbar-inverse navbar-fixed-top">
+        <nav className={this.state.navState+" navbar navbar-inverse navbar-fixed-top"}>
             <div className="container-fluid">
               <div className="navbar-header">    
                   <button type="button" className="nav_top_margin navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNavBar1" >
@@ -42,12 +57,12 @@ function App({ children, routes }) {
                     </Link>
                   </li>
                   <li className="">
-                    <Link to="/projects"><span className="sr-only">(current)</span>
+                    <Link to="/project"><span className="sr-only">(current)</span>
                       <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Projects
                     </Link>
                   </li>
                   <li className="">
-                    <Link to="/example"><span className="sr-only">(current)</span>
+                    <Link to="/resume" onClick={this.hideNav}><span className="sr-only" >(current)</span>
                       <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp; Resume
                     </Link>
                   </li>
@@ -67,9 +82,20 @@ function App({ children, routes }) {
             </div>
           </nav>
          </div >
-      {children}
-    </div>
-  );
-}
+         <div id="resumebar" className={this.state.ProfState}>
+           <div className="leftHomeNav container">
+             <div className="col-md-12">
+              <img src="http://via.placeholder.com/290x200" className="img-responsive profileSize"/>
+              <Link to="/" className="">Antonio Ng&nbsp;</Link>
+             </div>
+           </div>
+        </div>
+        <div className={this.state.ChildPad}>
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
+})
 
 export default App;

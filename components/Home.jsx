@@ -57,9 +57,9 @@ var Home = React.createClass({
              <Link to="/projects"><img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/> </Link>
           </div>
           <div className="col-md-4 HomePicStyle">
-              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle"><Link to="/example"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/projects/basic"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/projects/react"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle"><Link to="/projects/d3"><img src="http://via.placeholder.com/290x97" className="img-responsive HomeAppSize"/></Link></div>
           </div>
         </div>
         </div>

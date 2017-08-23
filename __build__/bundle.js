@@ -188,35 +188,35 @@
 	// onEnter hook checks if a redirect is needed before App component is loaded
 	_react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: '/', mapMenuTitle: 'Home', component: _App2.default, onEnter: checkForRedirect },
+	  { path: '/', component: _App2.default, onEnter: checkForRedirect },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  ' // pass the component as a child',
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat0 },
+	    { path: 'projects', component: _Projects2.default, allTabStat: allTabStat0 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'projects/basic', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat1 },
+	    { path: 'projects/basic', component: _Projects2.default, allTabStat: allTabStat1 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelBasic2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'projects/react', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat2 },
+	    { path: 'projects/react', component: _Projects2.default, allTabStat: allTabStat2 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelReact2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'projects/d3', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat3 },
+	    { path: 'projects/d3', component: _Projects2.default, allTabStat: allTabStat3 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelD2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: 'example', mapMenuTitle: 'Example', component: _ExampleComponent2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'two-deep', mapMenuTitle: 'Two Deep', component: _ExampleTwoDeepComponent2.default })
+	    { path: 'example', component: _ExampleComponent2.default },
+	    _react2.default.createElement(_reactRouter.Route, { path: 'two-deep', component: _ExampleTwoDeepComponent2.default })
 	  ),
-	  _react2.default.createElement(_reactRouter.Route, { path: '*', mapMenuTitle: 'Page Not Found', component: _PageNotFound2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _PageNotFound2.default })
 	);
 
 	(0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, {
@@ -26614,152 +26614,187 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function App(_ref) {
-	  var children = _ref.children,
-	      routes = _ref.routes;
+	var App = _react2.default.createClass({
+	  displayName: 'App',
 
+	  getInitialState: function getInitialState() {
+	    return {
+	      "navState": "active",
+	      "ProfState": "NavInvis",
+	      "ChildPad": "",
+	      "allTabStat": ["active", "none", "none", "none"]
+	    };
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps() {
+	    if (this.props.routes[this.props.routes.length - 1]["component"]["displayName"] == "resumePane") {
+	      this.setState({ "navState": "active",
+	        "ChildPad": "",
+	        "ProfState": "NavInvis" });
+	    }
+	  },
+	  componentWillMount: function componentWillMount() {
+	    if (this.props.routes[this.props.routes.length - 1]["component"]["displayName"] == "resumePane") {
+	      this.setState({ "navState": "NavInvis",
+	        "ChildPad": "RightColRes",
+	        "ProfState": "active" });
+	    } else {
+	      this.setState({ "navState": "active",
+	        "ChildPad": "",
+	        "ProfState": "NavInvis" });
+	    }
+	  },
 
-	  function generateMapMenu() {
-	    var path = '';
-	    return routes.filter(function (route) {
-	      return route.mapMenuTitle;
-	    }).map(function (route, index, array) {
-	      return _react2.default.createElement(
-	        'span',
-	        { key: index },
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          {
-	            to: path += (path.slice(-1) === '/' ? '' : '/') + (route.path === '/' ? '' : route.path)
-	          },
-	          route.mapMenuTitle
-	        ),
-	        index + 1 < array.length && ' / '
-	      );
-	    });
-	  }
-
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
+	  hideNav: function hideNav() {
+	    console.log("Test");
+	    this.setState({ "navState": "NavInvis",
+	      "ChildPad": "RightColRes",
+	      "ProfState": "active" });
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
 	      'div',
-	      { id: 'NavBar' },
+	      null,
 	      _react2.default.createElement(
-	        'nav',
-	        { className: 'navbar navbar-inverse navbar-fixed-top' },
+	        'div',
+	        { id: 'NavBar' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'container-fluid' },
+	          'nav',
+	          { className: this.state.navState + " navbar navbar-inverse navbar-fixed-top" },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'navbar-header' },
+	            { className: 'container-fluid' },
 	            _react2.default.createElement(
-	              'button',
-	              { type: 'button', className: 'nav_top_margin navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#TopNavBar1' },
-	              _react2.default.createElement('span', { className: 'icon-bar' }),
-	              _react2.default.createElement('span', { className: 'icon-bar' }),
-	              _react2.default.createElement('span', { className: 'icon-bar' })
-	            ),
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/', className: 'Nav_Ant NavStyle' },
-	              'Antonio Ng\xA0'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'collapse navbar-collapse', id: 'TopNavBar1' },
-	            _react2.default.createElement(
-	              'ul',
-	              { className: 'nav navbar-nav navbar-right nav_top_margin1' },
+	              'div',
+	              { className: 'navbar-header' },
 	              _react2.default.createElement(
-	                'li',
-	                { className: '' },
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/' },
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    '(current)'
-	                  ),
-	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-user', 'aria-hidden': 'true' }),
-	                  '\xA0 Home'
-	                )
+	                'button',
+	                { type: 'button', className: 'nav_top_margin navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#TopNavBar1' },
+	                _react2.default.createElement('span', { className: 'icon-bar' }),
+	                _react2.default.createElement('span', { className: 'icon-bar' }),
+	                _react2.default.createElement('span', { className: 'icon-bar' })
 	              ),
 	              _react2.default.createElement(
-	                'li',
-	                { className: '' },
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/projects' },
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    '(current)'
-	                  ),
-	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-folder-open', 'aria-hidden': 'true' }),
-	                  '\xA0 Projects'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                { className: '' },
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/example' },
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    '(current)'
-	                  ),
-	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope', 'aria-hidden': 'true' }),
-	                  '\xA0 Resume'
-	                )
+	                _reactRouter.Link,
+	                { to: '/', className: 'Nav_Ant NavStyle' },
+	                'Antonio Ng\xA0'
 	              )
 	            ),
 	            _react2.default.createElement(
-	              'ul',
-	              { className: 'nav navbar-nav navbar-centre nav_top_margin1' },
+	              'div',
+	              { className: 'collapse navbar-collapse', id: 'TopNavBar1' },
 	              _react2.default.createElement(
-	                'a',
-	                { className: 'navbar-brand', href: 'https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949', target: '_blank' },
+	                'ul',
+	                { className: 'nav navbar-nav navbar-right nav_top_margin1' },
 	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sr-only' },
-	                  '(current)'
+	                  'li',
+	                  { className: '' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/' },
+	                    _react2.default.createElement(
+	                      'span',
+	                      { className: 'sr-only' },
+	                      '(current)'
+	                    ),
+	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-user', 'aria-hidden': 'true' }),
+	                    '\xA0 Home'
+	                  )
 	                ),
-	                _react2.default.createElement('img', { alt: 'Linkedin', src: 'http://www.freeiconspng.com/uploads/linkedin-icon-1.png', className: 'icon_size' })
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: '' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/project' },
+	                    _react2.default.createElement(
+	                      'span',
+	                      { className: 'sr-only' },
+	                      '(current)'
+	                    ),
+	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-folder-open', 'aria-hidden': 'true' }),
+	                    '\xA0 Projects'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: '' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/resume', onClick: this.hideNav },
+	                    _react2.default.createElement(
+	                      'span',
+	                      { className: 'sr-only' },
+	                      '(current)'
+	                    ),
+	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope', 'aria-hidden': 'true' }),
+	                    '\xA0 Resume'
+	                  )
+	                )
 	              ),
 	              _react2.default.createElement(
-	                'a',
-	                { className: 'navbar-brand', href: 'https://github.com/AntonioNways', target: '_blank' },
+	                'ul',
+	                { className: 'nav navbar-nav navbar-centre nav_top_margin1' },
 	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sr-only' },
-	                  '(current)'
+	                  'a',
+	                  { className: 'navbar-brand', href: 'https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949', target: '_blank' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'sr-only' },
+	                    '(current)'
+	                  ),
+	                  _react2.default.createElement('img', { alt: 'Linkedin', src: 'http://www.freeiconspng.com/uploads/linkedin-icon-1.png', className: 'icon_size' })
 	                ),
-	                _react2.default.createElement('img', { alt: 'GitHub', src: 'http://www.freeiconspng.com/uploads/github-logo-icon-5.png', className: 'icon_size' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { className: 'navbar-brand', href: 'https://www.freecodecamp.com/antonionways', target: '_blank' },
 	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sr-only' },
-	                  '(current)'
+	                  'a',
+	                  { className: 'navbar-brand', href: 'https://github.com/AntonioNways', target: '_blank' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'sr-only' },
+	                    '(current)'
+	                  ),
+	                  _react2.default.createElement('img', { alt: 'GitHub', src: 'http://www.freeiconspng.com/uploads/github-logo-icon-5.png', className: 'icon_size' })
 	                ),
-	                _react2.default.createElement('img', { alt: 'FreeCodeCamp', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png', className: 'icon_size' })
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'navbar-brand', href: 'https://www.freecodecamp.com/antonionways', target: '_blank' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'sr-only' },
+	                    '(current)'
+	                  ),
+	                  _react2.default.createElement('img', { alt: 'FreeCodeCamp', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png', className: 'icon_size' })
+	                )
 	              )
 	            )
 	          )
 	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'resumebar', className: this.state.ProfState },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'leftHomeNav container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/', className: '' },
+	              'Antonio Ng\xA0'
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: this.state.ChildPad },
+	        this.props.children
 	      )
-	    ),
-	    children
-	  );
-	}
+	    );
+	  }
+	});
 
 	exports.default = App;
 
@@ -26845,7 +26880,7 @@
 	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
-	                  { to: '/example' },
+	                  { to: '/projects/basic' },
 	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
 	                )
 	              ),
@@ -26854,7 +26889,7 @@
 	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
-	                  { to: '/example' },
+	                  { to: '/projects/react' },
 	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
 	                )
 	              ),
@@ -26863,7 +26898,7 @@
 	                { className: 'col-md-12 HomePicStyle' },
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
-	                  { to: '/example' },
+	                  { to: '/projects/d3' },
 	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
 	                )
 	              )
