@@ -26705,7 +26705,7 @@
 	                  { className: '' },
 	                  _react2.default.createElement(
 	                    _reactRouter.Link,
-	                    { to: '/project' },
+	                    { to: '/projects' },
 	                    _react2.default.createElement(
 	                      'span',
 	                      { className: 'sr-only' },

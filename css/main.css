@@ -1,5 +1,5 @@
  .Nav_Ant{
-  font-size: 50px;
+  font-size: 40px;
   color: #e2e2e2;
   font-family: 'Qwigley', cursive;
   margin-top: 5px;
@@ -52,6 +52,7 @@ body{
     height: 300px;
 }
 .icon_size{
+  margin-top: -8px;
   height: 30px;
   width: 30px;
 }
@@ -153,4 +154,23 @@ div.tooltip {
 }
 .projectPicPad{
     margin-bottom: 10px;
+}
+.NavInvis{
+    display: none;
+}
+.leftHomeNav{
+    padding: 8px;
+    padding-top: 20px;
+    padding-left: 25px;
+    background-color: gray;
+    height: 100%; 
+    width: 25%;
+    position: fixed; 
+    overflow: auto;
+    
+}
+.RightColRes{
+    padding: 8px;
+    padding-left: 25%;
+    display: block;
 }
