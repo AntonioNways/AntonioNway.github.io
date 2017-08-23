@@ -70,15 +70,19 @@
 
 	var _ProjectPane2 = _interopRequireDefault(_ProjectPane);
 
-	var _PageNotFound = __webpack_require__(237);
+	var _SelBasic = __webpack_require__(237);
+
+	var _SelBasic2 = _interopRequireDefault(_SelBasic);
+
+	var _PageNotFound = __webpack_require__(238);
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _ExampleComponent = __webpack_require__(238);
+	var _ExampleComponent = __webpack_require__(239);
 
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 
-	var _ExampleTwoDeepComponent = __webpack_require__(239);
+	var _ExampleTwoDeepComponent = __webpack_require__(240);
 
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 
@@ -93,7 +97,10 @@
 	  "Visualize Data with a Scatterplot Graph": { "img": "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdk8tazBid00tMVE", "link": "https://codepen.io/SilverAnt/full/qjzGPQ/", "detail": "An interactive scatterplot graph that shows the doping allegations of professional bicycle racing", "type": "D3" },
 	  "Calculator": { "img": "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcl9CWEt0enBtR1k", "link": "https://codepen.io/SilverAnt/full/XMEREj/", "detail": "A simple calculator App.", "type": "Other" }
 	};
-	var allTabStat0 = { "allTabStat": ["none", "active", "none", "none"]
+	var allTabStat0 = { "allTabStat": ["active", "none", "none", "none"] };
+	var allTabStat1 = { "allTabStat": ["none", "active", "none", "none"] };
+	var allTabStat2 = { "allTabStat": ["none", "none", "active", "none"] };
+	var allTabStat3 = { "allTabStat": ["none", "none", "none", "active"]
 
 	  ///////////////////////////////////////////////////////////////////////////////
 	  // React for GitHub Pages - https://github.com/rafrex/react-github-pages
@@ -180,6 +187,11 @@
 	    _reactRouter.Route,
 	    { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat0 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData })
+	  ),
+	  _react2.default.createElement(
+	    _reactRouter.Route,
+	    { path: 'projects/basic', mapMenuTitle: 'Projects', component: _Projects2.default, allTabStat: allTabStat1 },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelBasic2.default, ProjectData: ProjectData })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
@@ -26960,7 +26972,7 @@
 	              { className: this.props.route.allTabStat["allTabStat"][0] },
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/project/' },
+	                { to: '/projects/' },
 	                'All'
 	              )
 	            ),
@@ -26969,7 +26981,7 @@
 	              { className: this.props.route.allTabStat["allTabStat"][1] },
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/project/basic' },
+	                { to: '/projects/basic' },
 	                'Canvas/SVG/CSS'
 	              )
 	            ),
@@ -26978,7 +26990,7 @@
 	              { className: this.props.route.allTabStat["allTabStat"][2] },
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/project/react' },
+	                { to: '/projects/react' },
 	                'React'
 	              )
 	            ),
@@ -26987,7 +26999,7 @@
 	              { className: this.props.route.allTabStat["allTabStat"][3] },
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: '/project/d3' },
+	                { to: '/projects/d3' },
 	                'D3'
 	              )
 	            ),
@@ -27082,6 +27094,68 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(170);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SelBasic = _react2.default.createClass({
+	  displayName: 'SelBasic',
+
+	  renderAllList: function renderAllList(val, x) {
+	    if (ProjectData[val].type == "Other") {
+	      return _react2.default.createElement(
+	        'div',
+	        { key: val, id: val, className: 'col-sm-12' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-4 projectPicPad' },
+	          ' ',
+	          _react2.default.createElement(
+	            'a',
+	            { href: this.props.route.ProjectData[val].link },
+	            _react2.default.createElement('img', { alt: val, src: this.props.route.ProjectData[val].img, className: 'img-responsive' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-8' },
+	          _react2.default.createElement(
+	            'h4',
+	            null,
+	            val
+	          ),
+	          this.props.route.ProjectData[val].detail
+	        )
+	      );
+	    } else {
+	      return;
+	    }
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      Object.keys(this.props.route.ProjectData).map(this.renderAllList)
+	    );
+	  }
+	});
+
+	exports.default = SelBasic;
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function PageNotFound(_ref) {
@@ -27099,7 +27173,7 @@
 	exports.default = PageNotFound;
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27142,7 +27216,7 @@
 	exports.default = ExampleComponent;
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

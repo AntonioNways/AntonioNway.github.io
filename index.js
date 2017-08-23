@@ -4,8 +4,11 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
 import Home from './components/Home';
+
 import Projects from './components/Projects';
 import ProjectPane from './components/ProjectPane';
+import SelBasic from './components/SelBasic';
+
 import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
@@ -19,7 +22,10 @@ var ProjectData= {"Dungeon Crawler":{"img":"https://drive.google.com/uc?export=d
 "Visualize Data with a Scatterplot Graph":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdk8tazBid00tMVE","link":"https://codepen.io/SilverAnt/full/qjzGPQ/","detail": "An interactive scatterplot graph that shows the doping allegations of professional bicycle racing","type":"D3" },
 "Calculator":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcl9CWEt0enBtR1k","link":"https://codepen.io/SilverAnt/full/XMEREj/","detail": "A simple calculator App.","type":"Other" }
 }
-var allTabStat0={"allTabStat":["none","active","none","none"]}
+var allTabStat0={"allTabStat":["active","none","none","none"]}
+var allTabStat1={"allTabStat":["none","active","none","none"]}
+var allTabStat2={"allTabStat":["none","none","active","none"]}
+var allTabStat3={"allTabStat":["none","none","none","active"]}
 
 ///////////////////////////////////////////////////////////////////////////////
 // React for GitHub Pages - https://github.com/rafrex/react-github-pages
@@ -102,6 +108,10 @@ const routes = (
     <Route path="projects" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat0}>
       <IndexRoute component={ProjectPane} ProjectData={ProjectData}/>
     </Route>
+    <Route path="projects/basic" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat1}>
+      <IndexRoute component={SelBasic} ProjectData={ProjectData}/>
+    </Route>
+
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
