@@ -27102,7 +27102,7 @@
 	  displayName: 'SelBasic',
 
 	  renderAllList: function renderAllList(val, x) {
-	    if (ProjectData[val].type == "Other") {
+	    if (this.props.route.ProjectData[val].type == "Other") {
 	      return _react2.default.createElement(
 	        'div',
 	        { key: val, id: val, className: 'col-sm-12' },
