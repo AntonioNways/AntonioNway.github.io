@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import ProjectPane from './components/ProjectPane';
 import SelBasic from './components/SelBasic';
+import SelReact from './components/SelReact';
 
 import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
@@ -110,6 +111,9 @@ const routes = (
     </Route>
     <Route path="projects/basic" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat1}>
       <IndexRoute component={SelBasic} ProjectData={ProjectData}/>
+    </Route>
+    <Route path="projects/react" mapMenuTitle="Projects" component={Projects} allTabStat={allTabStat2}>
+      <IndexRoute component={SelReact} ProjectData={ProjectData}/>
     </Route>
 
 
