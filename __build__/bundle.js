@@ -112,7 +112,49 @@
 	var allTabStat0 = { "allTabStat": ["active", "none", "none", "none"] };
 	var allTabStat1 = { "allTabStat": ["none", "active", "none", "none"] };
 	var allTabStat2 = { "allTabStat": ["none", "none", "active", "none"] };
-	var allTabStat3 = { "allTabStat": ["none", "none", "none", "active"]
+	var allTabStat3 = { "allTabStat": ["none", "none", "none", "active"] };
+
+	var profileInfo = {
+	  "basics": {
+	    "name": "Antonio Ng",
+	    "label": "Programmer, B.B.A., CPA, CMA",
+	    "picture": "",
+	    "email": "antonion90@gmail.com",
+	    "phone": "",
+	    "website": "",
+	    "summary": "",
+	    "location": "Markham, ON, Canada" },
+	  "work": [{
+	    "company": "Fieldgate",
+	    "position": "Staff Accountant/Accounting Analyst  ",
+	    "website": "",
+	    "startDate": "July 2014",
+	    "endDate": "March 2017",
+	    "summary": "Fieldgate is one of top Home Builders within the GTA with over 60 years of experience.",
+	    "highlights": ["Used VBA, Macro, and MS Office to automate annual roll-forward schedules", "Used SQL to retrieve and create informative table for analysis purpose", "Prepared over 50 accurate and comprehensive financial statements per year", "Tested accounting database and new accounting templates"]
+	  }],
+	  "education": [{
+	    "institution": "University",
+	    "area": "Software Development",
+	    "studyType": "Bachelor",
+	    "startDate": "2011-01-01",
+	    "endDate": "2013-01-01",
+	    "gpa": "4.0",
+	    "courses": ["DB1101 - Basic SQL"]
+	  }],
+	  "skills": [{
+	    "name": " Technical Skills",
+	    "level": "Master",
+	    "keywords": ["React", "D3", "SQL", "Node", "HTML", "Bootstrap", "CSS", "Javascript", "MS Office and Excel"]
+	  }, {
+	    "name": "Soft Skills",
+	    "level": "Excellent",
+	    "keywords": ["Analytical and problem solving", "Communication", "Interpersonal", "Leadership", "time management", "Prioritization", "Attention-to-details"]
+	  }, {
+	    "name": "Others",
+	    "level": "Excellent",
+	    "keywords": ["Cantonese", "Financial and Business knowledge", "Accounting"]
+	  }]
 
 	  ///////////////////////////////////////////////////////////////////////////////
 	  // React for GitHub Pages - https://github.com/rafrex/react-github-pages
@@ -215,7 +257,7 @@
 	    { path: 'projects/d3', component: _Projects2.default, allTabStat: allTabStat3 },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _SelD2.default, ProjectData: ProjectData })
 	  ),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _resumePane2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'resume', component: _resumePane2.default, profInfo: profileInfo }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: _PageNotFound2.default })
 	);
 
@@ -26777,12 +26819,64 @@
 	          { className: 'leftHomeNav container' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-12' },
-	            _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	            { className: 'col-md-12 RBBorder' },
 	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/', className: '' },
-	              'Antonio Ng\xA0'
+	              'center',
+	              null,
+	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/', className: '' },
+	                _react2.default.createElement(
+	                  'h2',
+	                  null,
+	                  this.state.AntInfo.basics.name
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'h4',
+	                null,
+	                this.state.AntInfo.basics.label
+	              ),
+	              '\xA0'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement('div', { className: 'Thr' }),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('span', { className: 'glyphicon glyphicon-map-marker icon_sizeR', 'aria-hidden': 'true' }),
+	              this.state.AntInfo.basics.location,
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope icon_sizeR', 'aria-hidden': 'true' }),
+	              this.state.AntInfo.basics.email,
+	              _react2.default.createElement('br', null)
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col-md-12' },
+	              _react2.default.createElement(
+	                'center',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949', target: '_blank' },
+	                  _react2.default.createElement('img', { alt: 'Linkedin', src: 'http://www.freeiconspng.com/uploads/linkedin-icon-1.png', className: 'icon_sizeNP' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/AntonioNways', target: '_blank' },
+	                  _react2.default.createElement('img', { alt: 'GitHub', src: 'http://www.freeiconspng.com/uploads/github-logo-icon-5.png', className: 'icon_sizeNP' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://www.freecodecamp.com/antonionways', target: '_blank' },
+	                  _react2.default.createElement('img', { alt: 'FreeCodeCamp', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png', className: 'icon_sizeNP' })
+	                )
+	              )
 	            )
 	          )
 	        )

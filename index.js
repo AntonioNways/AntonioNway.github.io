@@ -31,6 +31,63 @@ var allTabStat1={"allTabStat":["none","active","none","none"]}
 var allTabStat2={"allTabStat":["none","none","active","none"]}
 var allTabStat3={"allTabStat":["none","none","none","active"]}
 
+var profileInfo = {
+  "basics": {
+      "name": "Antonio Ng",
+      "label": "Programmer, B.B.A., CPA, CMA",
+      "picture": "",
+      "email": "antonion90@gmail.com",
+      "phone": "",
+      "website": "",
+      "summary": "",
+      "location": "Markham, ON, Canada"},
+    "work": [{
+      "company": "Fieldgate",
+      "position": "Staff Accountant/Accounting Analyst  ",
+      "website": "",
+      "startDate": "July 2014",
+      "endDate": "March 2017",
+      "summary": "Fieldgate is one of top Home Builders within the GTA with over 60 years of experience.",
+      "highlights": [
+        "Used VBA, Macro, and MS Office to automate annual roll-forward schedules",
+        "Used SQL to retrieve and create informative table for analysis purpose",
+        "Prepared over 50 accurate and comprehensive financial statements per year",
+        "Tested accounting database and new accounting templates"
+    ]
+  }],
+  "education": [{
+      "institution": "University",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "gpa": "4.0",
+      "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "skills": [{
+      "name": " Technical Skills",
+      "level": "Master",
+      "keywords": [
+        "React", "D3", "SQL","Node","HTML","Bootstrap","CSS","Javascript","MS Office and Excel"
+    ]
+  },{
+      "name": "Soft Skills",
+      "level": "Excellent",
+      "keywords": [
+        "Analytical and problem solving", "Communication", "Interpersonal","Leadership",
+        "time management",  "Prioritization", "Attention-to-details"
+    ]
+  },{
+      "name": "Others",
+      "level": "Excellent",
+      "keywords": [
+        "Cantonese","Financial and Business knowledge", "Accounting"
+    ]
+  }]
+  }
+
 ///////////////////////////////////////////////////////////////////////////////
 // React for GitHub Pages - https://github.com/rafrex/react-github-pages
 // ----------------------------------------------------------------------------
@@ -122,7 +179,7 @@ const routes = (
       <IndexRoute component={SelD3} ProjectData={ProjectData}/>
     </Route>
 
-    <Route path="resume" component={resumePane}>
+    <Route path="resume" component={resumePane} profInfo={profileInfo}>
     </Route>
 
     <Route path="*" component={PageNotFound} />
