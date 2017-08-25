@@ -26664,7 +26664,8 @@
 	      "navState": "active",
 	      "ProfState": "NavInvis",
 	      "ChildPad": "",
-	      "allTabStat": ["active", "none", "none", "none"]
+	      "allTabStat": ["active", "none", "none", "none"],
+	      "AntInfo": profileInfo
 	    };
 	  },
 	  componentWillReceiveProps: function componentWillReceiveProps() {
