@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 var App = React.createClass({
   getInitialState: function() {
+    var profileInfo = this.props.route.profInfo;
     return { 
       "navState": "active",
       "ProfState": "NavInvis",

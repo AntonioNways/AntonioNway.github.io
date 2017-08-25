@@ -240,7 +240,7 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: 'projects', component: _Projects2.default, allTabStat: allTabStat0 },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData })
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _ProjectPane2.default, ProjectData: ProjectData, profInfo: profileInfo })
 	  ),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
@@ -26660,6 +26660,7 @@
 	  displayName: 'App',
 
 	  getInitialState: function getInitialState() {
+	    var profileInfo = this.props.route.profInfo;
 	    return {
 	      "navState": "active",
 	      "ProfState": "NavInvis",

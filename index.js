@@ -167,7 +167,7 @@ const routes = (
 
 
     <Route path="projects"  component={Projects} allTabStat={allTabStat0}>
-      <IndexRoute component={ProjectPane} ProjectData={ProjectData}/>
+      <IndexRoute component={ProjectPane} ProjectData={ProjectData} profInfo={profileInfo}/>
     </Route>
     <Route path="projects/basic"  component={Projects} allTabStat={allTabStat1}>
       <IndexRoute component={SelBasic} ProjectData={ProjectData}/>
