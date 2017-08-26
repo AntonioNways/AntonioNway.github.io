@@ -53,6 +53,14 @@ body{
 }
 .icon_size{
   margin-top: -8px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+}
+.icon_sizeNP{
+  margin-top: 18px;
+  margin-left: 15px;
+  margin-right: 15px;
   height: 30px;
   width: 30px;
 }
@@ -80,6 +88,8 @@ body{
     width: 100%;
 }
 .HomeAppSize{
+  width: 297px;
+  height: 102px;
   padding-bottom: 5px;
 }
 .profileSize{
@@ -160,17 +170,149 @@ div.tooltip {
 }
 .leftHomeNav{
     padding: 8px;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 25px;
     background-color: gray;
     height: 100%; 
     width: 25%;
     position: fixed; 
     overflow: auto;
+    z-index: 500
     
 }
 .RightColRes{
     padding: 8px;
     padding-left: 25%;
     display: block;
+}
+hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid black;
+}
+.Thr{
+    margin-top: -10px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.icon_sizeR{
+  padding-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.3em;
+  height: 30px;
+  width: 30px;
+}
+.icon_sizeRH{
+  margin-top: 8px;
+}
+.ResumeHeader{
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: 1px solid black;
+}
+.ResumeHeader1{
+    font-size: 1.3em;
+    margin-left: 30px;
+    margin-right: 60px;
+    width: 95%;
+    display: inline-block;
+}
+.Rl{
+    margin-left: 25px;
+    margin-top: -25px;
+    border-bottom: 1px solid black;
+}
+
+.ResumeHeader1.Rl{
+    display: inline-block;
+}
+.nopadd{
+   padding-left: 0 ;
+   padding-right: 0 ;
+   margin: 0
+}
+.Resumepadding{
+    margin-top: 10px;
+    padding-left: 65px;
+    list-style-type: none;
+}
+.listStyle{
+    margin-top: -17px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.skill-progress{
+    height: 55px;
+    width: 8px;
+    margin-right: 3px;
+    background: #5cb85c;
+    border-radius: 3px;
+}
+.skill-style{
+    margin-top: -20px;
+}
+li div{
+    display: inline-block;
+    height: 30px;
+}
+.SkillBoxes{
+    display: inline-block;
+    background: #7eb0db;
+    color: white;
+    font-size: 0.9em;
+    padding: 5px;
+    border: 1px solid #357ebd;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+.inlineP{
+    display: inline-block;
+}
+.container-size{
+    width: auto;
+    height: 100%;
+    display: block;
+}
+.addCheckMark:before{
+    content: '✓';
+}
+.WorkPadding{
+    list-style-type: none;
+}
+.summaryFont{
+    margin-top: -8px;
+    font-size: 0.9em;
+}
+.resumeWidth{
+    min-width: 870px;
+    margin-top: 8px;
+}
+.EduBoxes{
+    background: #5cb85c;
+    color: white;
+    font-size: 0.9em;
+    padding: 5px;
+    border: 1px solid greenyellow;
+    margin-right: 5px;
+    border-radius: 6px;
+    margin-top: -18px;
+}
+.makebr{
+    display: block;
+    margin-top: -8px;
+    margin-bottom: -5px;
+}
+.childE {
+    width: 98.3%;
+    display: block;
+    height: auto;
+    margin-bottom: -12px;
+}
+.parentE{
+    overflow:visible; 
+    height: 100%;
 }

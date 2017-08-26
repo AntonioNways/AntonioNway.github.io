@@ -26977,7 +26977,7 @@
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/projects/basic' },
-	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8', className: 'img-responsive HomeAppSize' })
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -26986,7 +26986,7 @@
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/projects/react' },
-	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                  _react2.default.createElement('img', { src: 'http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png', className: 'img-responsive HomeAppSize' })
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -26995,7 +26995,7 @@
 	                _react2.default.createElement(
 	                  _reactRouter.Link,
 	                  { to: '/projects/d3' },
-	                  _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x97', className: 'img-responsive HomeAppSize' })
+	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ', className: 'img-responsive HomeAppSize' })
 	                )
 	              )
 	            )
@@ -27436,11 +27436,71 @@
 	var resumePane = _react2.default.createClass({
 	  displayName: 'resumePane',
 
+	  listKeyWords: function listKeyWords(val, x) {
+	    return _react2.default.createElement(
+	      'span',
+	      { key: val, className: 'SkillBoxes' },
+	      val
+	    );
+	  },
+	  renderSkills: function renderSkills(val, x) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: this.props.route.profInfo.skills[val] + val },
+	      _react2.default.createElement('div', { className: 'skill-progress' }),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'listStyle' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'skill-style' },
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            this.props.route.profInfo.skills[val]["name"],
+	            _react2.default.createElement('br', null)
+	          ),
+	          this.props.route.profInfo.skills[val]["keywords"].map(this.listKeyWords)
+	        )
+	      )
+	    );
+	  },
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'col-sm-4 ProjNavPadData' },
-	      'TESTSTESTSTSE'
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'ResumeHeader' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'BACKGROUND'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'resumeWidth' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'ResumeHeader1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-star icon_sizeRH', 'aria-hidden': 'true' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Rl' },
+	            'SKILLS'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'Resumepadding' },
+	            Object.keys(this.props.route.profInfo.skills).map(this.renderSkills)
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
