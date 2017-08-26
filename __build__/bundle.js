@@ -27465,6 +27465,73 @@
 	      )
 	    );
 	  },
+	  listWork: function listWork(val, x) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: val + "work", className: 'addCheckMark' },
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        '\u2009',
+	        val
+	      )
+	    );
+	  },
+	  renderWorkExp: function renderWorkExp(val, x) {
+	    return _react2.default.createElement(
+	      'li',
+	      { key: this.props.route.profInfo.work[val] + val, className: 'resumeWidth' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'container-size' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container-fluid' },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              { className: 'inlineP' },
+	              _react2.default.createElement(
+	                'strong',
+	                null,
+	                this.props.route.profInfo.work[val]["company"],
+	                ',\u2009'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inlineP' },
+	              " " + this.props.route.profInfo.work[val]["position"]
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inlineP pull-right Resumepadding' },
+	              this.props.route.profInfo.work[val]["startDate"],
+	              ' - ',
+	              this.props.route.profInfo.work[val]["endDate"]
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'summaryFont' },
+	                this.props.route.profInfo.work[val]["summary"]
+	              ),
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'WorkPadding' },
+	                this.props.route.profInfo.work[val]["highlights"].map(this.listWork)
+	              )
+	            )
+	          )
+	        )
+	      )
+	    );
+	  },
+
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
@@ -27498,6 +27565,29 @@
 	            'ul',
 	            { className: 'Resumepadding' },
 	            Object.keys(this.props.route.profInfo.skills).map(this.renderSkills)
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'resumeWidth' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'ResumeHeader1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-briefcase icon_sizeRH', 'aria-hidden': 'true' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Rl' },
+	            'WORK EXPERIENCE'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'Resumepadding' },
+	            Object.keys(this.props.route.profInfo.work).map(this.renderWorkExp)
 	          )
 	        )
 	      )
