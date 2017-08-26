@@ -55,17 +55,35 @@ var profileInfo = {
         "Tested accounting database and new accounting templates"
     ]
   }],
+
   "education": [{
-      "institution": "University",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "gpa": "4.0",
+      "institution": "Free Code Camp",
+      "area": "Computer Science",
+      "studyType": "Certificate",
+      "startDate": "May 2017",
+      "endDate": "July 2017",
+      "gpa": "",
       "courses": [
-      "DB1101 - Basic SQL"
+      "Front-end development Certificate", "Data-Visualization Certificate"
     ]
+  },{
+      "institution": "Chartered Professional Accountants of Canada",
+      "area": "Accounting & Management",
+      "studyType": "Designation (CPA,CMA)",
+      "startDate": "October 2015",
+      "endDate": "Current",
+      "gpa": "",
+      "courses": []
+  },{
+      "institution": "University of Toronto",
+      "area": "Accounting & Management",
+      "studyType": "B.B.A with Distinction",
+      "startDate": "September 2008",
+      "endDate": "June 2012",
+      "gpa": "4.0",
+      "courses": []
   }],
+
   "skills": [{
       "name": " Technical Skills",
       "level": "Master",

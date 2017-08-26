@@ -41,7 +41,25 @@ var resumePane = React.createClass({
 
     </div></li>
   },
+  listEduA:function(val,x){
+    return <p key={val} className="EduBoxes inlineP">{val}</p>
+  },
+  renderEducation: function(val,x){
+    return <li className="resumeWidth" key={this.props.route.profInfo.education[val]["institution"]}><div className="container-size parentE">
+      <div className="childE">
+        <div className="container-size">
+          <div className="inlineP"><strong>{this.props.route.profInfo.education[val]["institution"]},&thinsp;</strong></div>
+          <div className="inlineP">{" "+this.props.route.profInfo.education[val]["area"]}</div>
+          <div className="inlineP pull-right">{this.props.route.profInfo.education[val]["startDate"]} - {this.props.route.profInfo.education[val]["endDate"]}</div>
+          <div className="makebr"><p className="summaryFont">{this.props.route.profInfo.education[val]["studyType"]}</p></div>
+          {this.props.route.profInfo.education[val]["courses"].map(this.listEduA)}
+          
+        </div>
+      </div>
 
+    </div>
+      </li>
+  },
   render: function () {
     return (
       
@@ -67,7 +85,15 @@ var resumePane = React.createClass({
             <ul className="Resumepadding">{Object.keys(this.props.route.profInfo.work).map(this.renderWorkExp)}</ul>
           </div>
         </div>
- 
+        <div className="resumeWidth">
+          <div className="ResumeHeader1">
+            <span className="glyphicon glyphicon-education icon_sizeRH" aria-hidden="true"></span>
+            <div className="Rl">EDUCATION</div>
+          </div>
+          <div >
+            <ul className="Resumepadding">{Object.keys(this.props.route.profInfo.education).map(this.renderEducation)}</ul>
+          </div>
+        </div>
         
       </div>
       

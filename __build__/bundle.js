@@ -133,15 +133,33 @@
 	    "summary": "Fieldgate is one of top Home Builders within the GTA with over 60 years of experience.",
 	    "highlights": ["Used VBA, Macro, and MS Office to automate annual roll-forward schedules", "Used SQL to retrieve and create informative table for analysis purpose", "Prepared over 50 accurate and comprehensive financial statements per year", "Tested accounting database and new accounting templates"]
 	  }],
+
 	  "education": [{
-	    "institution": "University",
-	    "area": "Software Development",
-	    "studyType": "Bachelor",
-	    "startDate": "2011-01-01",
-	    "endDate": "2013-01-01",
+	    "institution": "Free Code Camp",
+	    "area": "Computer Science",
+	    "studyType": "Certificate",
+	    "startDate": "May 2017",
+	    "endDate": "July 2017",
+	    "gpa": "",
+	    "courses": ["Front-end development Certificate", "Data-Visualization Certificate"]
+	  }, {
+	    "institution": "Chartered Professional Accountants of Canada",
+	    "area": "Accounting & Management",
+	    "studyType": "Designation (CPA,CMA)",
+	    "startDate": "October 2015",
+	    "endDate": "Current",
+	    "gpa": "",
+	    "courses": []
+	  }, {
+	    "institution": "University of Toronto",
+	    "area": "Accounting & Management",
+	    "studyType": "B.B.A with Distinction",
+	    "startDate": "September 2008",
+	    "endDate": "June 2012",
 	    "gpa": "4.0",
-	    "courses": ["DB1101 - Basic SQL"]
+	    "courses": []
 	  }],
+
 	  "skills": [{
 	    "name": " Technical Skills",
 	    "level": "Master",
@@ -27531,7 +27549,63 @@
 	      )
 	    );
 	  },
-
+	  listEduA: function listEduA(val, x) {
+	    return _react2.default.createElement(
+	      'p',
+	      { key: val, className: 'EduBoxes inlineP' },
+	      val
+	    );
+	  },
+	  renderEducation: function renderEducation(val, x) {
+	    return _react2.default.createElement(
+	      'li',
+	      { className: 'resumeWidth', key: this.props.route.profInfo.education[val]["institution"] },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'container-size parentE' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'childE' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container-size' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inlineP' },
+	              _react2.default.createElement(
+	                'strong',
+	                null,
+	                this.props.route.profInfo.education[val]["institution"],
+	                ',\u2009'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inlineP' },
+	              " " + this.props.route.profInfo.education[val]["area"]
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'inlineP pull-right' },
+	              this.props.route.profInfo.education[val]["startDate"],
+	              ' - ',
+	              this.props.route.profInfo.education[val]["endDate"]
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'makebr' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'summaryFont' },
+	                this.props.route.profInfo.education[val]["studyType"]
+	              )
+	            ),
+	            this.props.route.profInfo.education[val]["courses"].map(this.listEduA)
+	          )
+	        )
+	      )
+	    );
+	  },
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
@@ -27588,6 +27662,29 @@
 	            'ul',
 	            { className: 'Resumepadding' },
 	            Object.keys(this.props.route.profInfo.work).map(this.renderWorkExp)
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'resumeWidth' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'ResumeHeader1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-education icon_sizeRH', 'aria-hidden': 'true' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'Rl' },
+	            'EDUCATION'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'Resumepadding' },
+	            Object.keys(this.props.route.profInfo.education).map(this.renderEducation)
 	          )
 	        )
 	      )
