@@ -27142,62 +27142,66 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'container' },
+	      { className: 'ProjectBG' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	          'nav',
-	          { className: 'col-sm-3' },
-	          _react2.default.createElement(
-	            'ul',
-	            { className: 'nav nav-pills nav-stacked ProjNavPad', 'data-spy': 'affix', 'data-offset-top': '105' },
-	            _react2.default.createElement(
-	              'li',
-	              { className: this.props.route.allTabStat["allTabStat"][0] },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/projects/' },
-	                'All'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              { className: this.props.route.allTabStat["allTabStat"][1] },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/projects/basic' },
-	                'Canvas/SVG/CSS'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              { className: this.props.route.allTabStat["allTabStat"][2] },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/projects/react' },
-	                'React'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              { className: this.props.route.allTabStat["allTabStat"][3] },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/projects/d3' },
-	                'D3'
-	              )
-	            ),
-	            console.log(this.props.route.allTabStat["allTabStat"])
-	          )
-	        ),
+	        { className: 'container' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-sm-9 ProjNavPadData' },
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'nav',
+	            { className: 'col-sm-3' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'nav nav-pills nav-stacked ProjNavPad', 'data-spy': 'affix', 'data-offset-top': '105' },
+	              _react2.default.createElement(
+	                'li',
+	                { className: this.props.route.allTabStat["allTabStat"][0] },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/projects/' },
+	                  'All'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: this.props.route.allTabStat["allTabStat"][1] },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/projects/basic' },
+	                  'Canvas/SVG/CSS'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: this.props.route.allTabStat["allTabStat"][2] },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/projects/react' },
+	                  'React'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: this.props.route.allTabStat["allTabStat"][3] },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/projects/d3' },
+	                  'D3'
+	                )
+	              ),
+	              console.log(this.props.route.allTabStat["allTabStat"])
+	            )
+	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
-	            this.props.children
+	            { className: 'col-sm-9 ProjNavPadData' },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              this.props.children
+	            )
 	          )
 	        )
 	      )
