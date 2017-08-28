@@ -5,16 +5,21 @@
   margin-top: 5px;
   margin-left: 50px;
   }
-  a.Nav_Ant:hover{color:#e2e2e2;}
-  a.Nav_Ant:link{color:#e2e2e2;}
-  a.Nav_Ant:active{color:white;}
-  a.Nav_Ant:visited{color:#e2e2e2;}
+  a.Nav_Ant:hover{
+      text-decoration: none;
+      color:#e2e2e2;}
+  a.Nav_Ant:link{color:#e2e2e2;
+  text-decoration: none;}
+  a.Nav_Ant:active{color:white;
+  text-decoration: none;}
+  a.Nav_Ant:visited{color:#e2e2e2;
+  text-decoration: none;}
 
   .nav_top_margin{
     margin-top: 18px;
   }
   .nav_pad{
-    margin-top: 75px;
+    margin-top: 60px;
     z-index: 0;
     position: absolute;
   }
@@ -92,9 +97,21 @@ body{
   height: 102px;
   padding-bottom: 5px;
 }
+.HomeAppSizeSp{
+  background: white;
+  height: 97px;
+}
 .profileSize{
-    height: 200px;
+    height: 175px;
     width: 200px;
+}
+.profileSizeR{
+    height: 185px;
+    width: 160px;
+}
+.btn-primary-outline{
+    background-color:transparent;
+    color: black;
 }
 .HomeALR{
     animation: mymoveALR .5s;
@@ -178,8 +195,12 @@ div.tooltip {
     position: fixed; 
     overflow: auto;
     z-index: 500
-    
 }
+a:hover{text-decoration: none;}
+  a:link{color: #363738}
+  a:visited{
+      color: #363738}
+
 .RightColRes{
     padding: 8px;
     padding-left: 25%;
@@ -315,4 +336,20 @@ li div{
 .parentE{
     overflow:visible; 
     height: 100%;
+}
+.ProjectBG{
+    background-color: #BFBFBF;
+    height:100%;
+    min-height: 100vh;
+}
+.HomeButtonSize{
+ font-size: 1.5em;
+}
+
+.navbar-custom{
+    background-color: #4d4d51;
+    border-bottom-color: #4d4d51;
+}
+.Homebgc{
+    background-color: cornflowerblue;
 }

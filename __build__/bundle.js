@@ -100,6 +100,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var currentLink = "https://github.com/AntonioNways";
 	///DATA to pass down to Children////
 	var ProjectData = { "Dungeon Crawler": { "img": "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzanZKbEJidURrM1E", "link": "https://codepen.io/SilverAnt/full/PjVyLB/", "detail": "A basic Dungeon Crawler game. Instructions: Travel the Dungeon an beat the boss in Dungeon level 4. (Note: Blue = Player, Red = enemy, Green = HP, Yellow = Weopen Upgrade, Purple = Move to next Dungeon)", "type": "React" },
 	  "Game of Life": { "img": "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzNUl0cE9JV2EyMzg", "link": "https://codepen.io/SilverAnt/full/yXjEKx/", "detail": "A simple game with where you can click on a cell to turn it alive or dead. After each generation, the cells will either reproduce or die. For more rules of the game, please refer to https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life", "type": "React" },
@@ -252,8 +253,8 @@
 	// onEnter hook checks if a redirect is needed before App component is loaded
 	_react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: '/', component: _App2.default, onEnter: checkForRedirect, profInfo: profileInfo },
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	  { path: '/', component: _App2.default, onEnter: checkForRedirect, profInfo: profileInfo, currentLink: currentLink },
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default, currentLink: currentLink }),
 	  ' // pass the component as a child',
 	  _react2.default.createElement(
 	    _reactRouter.Route,
@@ -26682,7 +26683,6 @@
 	    return {
 	      "navState": "active",
 	      "ProfState": "NavInvis",
-	      "ChildPad": "",
 	      "allTabStat": ["active", "none", "none", "none"],
 	      "AntInfo": profileInfo
 	    };
@@ -26843,7 +26843,19 @@
 	            _react2.default.createElement(
 	              'center',
 	              null,
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'btn-group HomeButtonSize', role: 'toolbar', 'aria-label': '...' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: '/', className: '' },
+	                  ' ',
+	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-home', 'aria-hidden': 'true' })
+	                )
+	              ),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('br', null),
+	              _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzQU5nRGNicDhRSHc', className: 'img-responsive profileSizeR img-rounded' }),
 	              _react2.default.createElement(
 	                _reactRouter.Link,
 	                { to: '/', className: '' },
@@ -26963,10 +26975,11 @@
 	      { className: 'nav_pad container-fluid' },
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'row' },
+	        { className: 'row Homebgc' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-12' },
+	          _react2.default.createElement('br', null),
 	          _react2.default.createElement('br', null)
 	        ),
 	        _react2.default.createElement('div', { className: 'col-md-1' }),
@@ -26982,7 +26995,7 @@
 	              _react2.default.createElement(
 	                _reactRouter.Link,
 	                { to: '/projects' },
-	                _react2.default.createElement('img', { src: 'http://via.placeholder.com/1000x300', className: 'img-responsive ThemeSize' }),
+	                _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzWmQxRGtvejBoM0U', className: 'img-responsive ThemeSize' }),
 	                ' '
 	              )
 	            ),
@@ -26991,32 +27004,37 @@
 	              { className: 'col-md-4 HomePicStyle' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle' },
+	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/projects/basic' },
-	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8', className: 'img-responsive HomeAppSize' })
+	                  'a',
+	                  { href: this.props.route.currentLink + "/project/basic" },
+	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8', className: 'img-responsive' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle' },
+	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/projects/react' },
-	                  _react2.default.createElement('img', { src: 'http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png', className: 'img-responsive HomeAppSize' })
+	                  'a',
+	                  { href: this.props.route.currentLink + "/project/react" },
+	                  _react2.default.createElement('img', { src: 'http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png', className: 'img-responsive HomeAppSizeSp' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle' },
+	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/projects/d3' },
-	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ', className: 'img-responsive HomeAppSize' })
+	                  'a',
+	                  { href: this.props.route.currentLink + "/project/d3" },
+	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ', className: 'img-responsive' })
 	                )
 	              )
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            _react2.default.createElement('br', null)
 	          )
 	        )
 	      ),
@@ -27061,12 +27079,12 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. '
+	                'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested in programming. From there, I have learned Python, Django, HTML, and CSS, Javascript, React, D3. '
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!'
+	                'I am currently seeking for opportunities initiaives. Please contact me at antonion90@gmail.com'
 	              ),
 	              _react2.default.createElement('br', null)
 	            ),

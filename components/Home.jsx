@@ -67,7 +67,7 @@ var Home = React.createClass({
         </div>
         </div>
         </div>
-        
+
           <div className="">
       <div className="row">
         <div className="col-md-12">
@@ -85,10 +85,11 @@ var Home = React.createClass({
           <h1>About Me</h1>
           
                 <br></br>
-                <p>In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested and started to learn programming. From there, I have learned Python, Django, HTML, and CSS. As of now, I am learning to program from Free Code Camp. </p>
-                <p>I am currently seeking for opportunities initiaives. Please contact me at Siiv3rd@gmail.com!</p>
+                <p>In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested in programming. From there, I have learned Python, Django, HTML, and CSS, Javascript, React, D3. </p>
+                <p>I am currently seeking for opportunities initiaives. Please contact me at antonion90@gmail.com</p>
                 <br></br>
           </div>
+          
           <div className="col-md-4 HomeARL">
             <br></br>
             <center><h3>History</h3></center>
