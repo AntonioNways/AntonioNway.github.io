@@ -7,7 +7,6 @@ var App = React.createClass({
     return { 
       "navState": "active",
       "ProfState": "NavInvis",
-      "ChildPad":"",
       "allTabStat":["active","none","none","none"],
       "AntInfo":profileInfo
     };
@@ -87,7 +86,12 @@ var App = React.createClass({
          <div id="resumebar" className={this.state.ProfState}>
            <div className="leftHomeNav container">
              <div className="col-md-12 RBBorder"><center>
-              <img src="http://via.placeholder.com/290x200" className="img-responsive profileSize"/>
+              <div className="btn-group HomeButtonSize" role="toolbar" aria-label="...">
+                  <Link to="/" className=""> <span className="glyphicon glyphicon-home" aria-hidden="true"></span></Link>
+              </div>
+              <br></br>
+              <br></br>
+              <img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzQU5nRGNicDhRSHc" className="img-responsive profileSizeR img-rounded"/>
               <Link to="/" className=""><h2>{this.state.AntInfo.basics.name}</h2></Link>
               <h4>{this.state.AntInfo.basics.label}</h4>&nbsp;
               </center></div>
