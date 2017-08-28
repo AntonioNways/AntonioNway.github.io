@@ -76,7 +76,7 @@ var Home = React.createClass({
             <br></br>
             <br></br>
             <br></br>
-            <img src="http://via.placeholder.com/290x200" className="img-responsive profileSize"/>
+            <img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzUjd2MllMc3lQcjg" className="img-responsive profileSize img-circle"/>
             <h2>Antonio Ng</h2>  
             <h4> Acountant (CPA, CMA) and Programmer</h4>
           </div>

@@ -27054,7 +27054,7 @@
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('br', null),
 	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('img', { src: 'http://via.placeholder.com/290x200', className: 'img-responsive profileSize' }),
+	              _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzUjd2MllMc3lQcjg', className: 'img-responsive profileSize img-circle' }),
 	              _react2.default.createElement(
 	                'h2',
 	                null,
