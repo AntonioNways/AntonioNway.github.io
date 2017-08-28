@@ -47,23 +47,27 @@ var Home = React.createClass({
   },
   render : function() {
     return (
-    <div className="nav_pad container-fluid">
-      <div className="row">
-        <div className="col-md-12"><br></br></div>
+        <div className="nav_pad container-fluid">
+      <div className="row Homebgc">
+        <div className="col-md-12"><br></br><br></br></div>
         <div className="col-md-1"></div>
         <div className="col-md-10">
         <div className="col-md-12">
           <div className="col-md-8 HomePicStyle">
-             <Link to="/projects"><img src="http://via.placeholder.com/1000x300" className="img-responsive ThemeSize"/> </Link>
+             <Link to="/projects"><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzWmQxRGtvejBoM0U" className="img-responsive ThemeSize"/> </Link>
           </div>
           <div className="col-md-4 HomePicStyle">
-              <div className="col-md-12 HomePicStyle"><Link to="/projects/basic"><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle"><Link to="/projects/react"><img src="http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png" className="img-responsive HomeAppSize"/></Link></div>
-              <div className="col-md-12 HomePicStyle"><Link to="/projects/d3"><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ" className="img-responsive HomeAppSize"/></Link></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/basic"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8" className="img-responsive"/></a></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/react"}><img src="http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png" className="img-responsive HomeAppSizeSp"/></a></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/d3"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ" className="img-responsive"/></a></div>
           </div>
         </div>
+        <div className="col-md-12">
+          <br></br>
         </div>
         </div>
+        </div>
+        
           <div className="">
       <div className="row">
         <div className="col-md-12">
