@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 
 var resumePane = React.createClass({
-    listKeyWords: function(val,x){
+listKeyWords: function(val,x){
     return <span key={val} className="SkillBoxes">{val}</span>
   },
   renderSkills: function(val,x){
