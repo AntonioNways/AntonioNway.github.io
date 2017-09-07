@@ -18,7 +18,7 @@ import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 
 
-var currentLink="https://github.com/AntonioNways";
+var currentLink="https://antonionways.github.io/";
 ///DATA to pass down to Children////
 var ProjectData= {"Dungeon Crawler":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzanZKbEJidURrM1E","link":"https://codepen.io/SilverAnt/full/PjVyLB/","detail": "A basic Dungeon Crawler game. Instructions: Travel the Dungeon an beat the boss in Dungeon level 4. (Note: Blue = Player, Red = enemy, Green = HP, Yellow = Weopen Upgrade, Purple = Move to next Dungeon)","type":"React" },
 "Game of Life":{"img":"https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzNUl0cE9JV2EyMzg","link":"https://codepen.io/SilverAnt/full/yXjEKx/","detail": "A simple game with where you can click on a cell to turn it alive or dead. After each generation, the cells will either reproduce or die. For more rules of the game, please refer to https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life","type":"React" }, 
