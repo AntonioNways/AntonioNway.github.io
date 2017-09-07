@@ -27007,7 +27007,7 @@
 	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
 	                  'a',
-	                  { href: this.props.route.currentLink + "/project/basic" },
+	                  { href: this.props.route.currentLink + "/projects/basic" },
 	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8', className: 'img-responsive' })
 	                )
 	              ),
@@ -27016,7 +27016,7 @@
 	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
 	                  'a',
-	                  { href: this.props.route.currentLink + "/project/react" },
+	                  { href: this.props.route.currentLink + "/projects/react" },
 	                  _react2.default.createElement('img', { src: 'http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png', className: 'img-responsive HomeAppSizeSp' })
 	                )
 	              ),
@@ -27025,7 +27025,7 @@
 	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
 	                _react2.default.createElement(
 	                  'a',
-	                  { href: this.props.route.currentLink + "/project/d3" },
+	                  { href: this.props.route.currentLink + "/projects/d3" },
 	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ', className: 'img-responsive' })
 	                )
 	              )

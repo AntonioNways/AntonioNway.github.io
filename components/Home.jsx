@@ -57,9 +57,9 @@ var Home = React.createClass({
              <Link to="/projects"><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzWmQxRGtvejBoM0U" className="img-responsive ThemeSize"/> </Link>
           </div>
           <div className="col-md-4 HomePicStyle">
-              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/basic"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8" className="img-responsive"/></a></div>
-              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/react"}><img src="http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png" className="img-responsive HomeAppSizeSp"/></a></div>
-              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/project/d3"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ" className="img-responsive"/></a></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/projects/basic"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8" className="img-responsive"/></a></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/projects/react"}><img src="http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png" className="img-responsive HomeAppSizeSp"/></a></div>
+              <div className="col-md-12 HomePicStyle HomeAppSize"><a href={this.props.route.currentLink+"/projects/d3"}><img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ" className="img-responsive"/></a></div>
           </div>
         </div>
         <div className="col-md-12">
