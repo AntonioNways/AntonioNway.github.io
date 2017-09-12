@@ -26765,17 +26765,73 @@
 	                ),
 	                _react2.default.createElement(
 	                  'li',
-	                  { className: '' },
+	                  { role: 'presentation', className: 'dropdown' },
 	                  _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/projects' },
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'sr-only' },
-	                      '(current)'
-	                    ),
+	                    'a',
+	                    { 'class': 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
 	                    _react2.default.createElement('span', { className: 'glyphicon glyphicon-folder-open', 'aria-hidden': 'true' }),
-	                    '\xA0 Projects'
+	                    '\xA0 Projects ',
+	                    _react2.default.createElement('span', { className: 'caret' })
+	                  ),
+	                  _react2.default.createElement(
+	                    'ul',
+	                    { className: 'dropdown-menu' },
+	                    _react2.default.createElement(
+	                      'li',
+	                      null,
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: this.props.route.currentLink + "/projects" },
+	                        _react2.default.createElement(
+	                          'span',
+	                          { className: 'sr-only' },
+	                          '(current)'
+	                        ),
+	                        '\xA0 All'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      null,
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: this.props.route.currentLink + "/projects/basic" },
+	                        _react2.default.createElement(
+	                          'span',
+	                          { className: 'sr-only' },
+	                          '(current)'
+	                        ),
+	                        '\xA0 HTML/CSS'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      null,
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: this.props.route.currentLink + "/projects/react" },
+	                        _react2.default.createElement(
+	                          'span',
+	                          { className: 'sr-only' },
+	                          '(current)'
+	                        ),
+	                        '\xA0 React'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      null,
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: this.props.route.currentLink + "/projects/d3" },
+	                        _react2.default.createElement(
+	                          'span',
+	                          { className: 'sr-only' },
+	                          '(current)'
+	                        ),
+	                        '\xA0 D3'
+	                      )
+	                    )
 	                  )
 	                ),
 	                _react2.default.createElement(

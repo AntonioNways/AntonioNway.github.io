@@ -57,10 +57,32 @@ var App = React.createClass({
                       <span className="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Home
                     </Link>
                   </li>
-                  <li className="">
-                    <Link to="/projects"><span className="sr-only">(current)</span>
-                      <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Projects
-                    </Link>
+                  <li role="presentation" className="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <span className="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp; Projects <span className="caret"></span>
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li>
+                        <a href={this.props.route.currentLink+"/projects"}><span className="sr-only">(current)</span>
+                          &nbsp; All
+                        </a>
+                      </li>
+                      <li>
+                        <a href={this.props.route.currentLink+"/projects/basic"}><span className="sr-only">(current)</span>
+                          &nbsp; HTML/CSS
+                        </a>
+                      </li>
+                      <li>
+                        <a href={this.props.route.currentLink+"/projects/react"}><span className="sr-only">(current)</span>
+                          &nbsp; React
+                        </a>
+                      </li>
+                      <li>
+                        <a href={this.props.route.currentLink+"/projects/d3"}><span className="sr-only">(current)</span>
+                          &nbsp; D3
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                   <li className="">
                     <Link to="/resume" onClick={this.hideNav}><span className="sr-only" >(current)</span>
