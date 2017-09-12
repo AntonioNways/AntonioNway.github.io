@@ -1,9 +1,9 @@
  .Nav_Ant{
-  font-size: 40px;
+  font-size: 45px;
   color: #e2e2e2;
   font-family: 'Qwigley', cursive;
-  margin-top: 5px;
-  margin-left: 50px;
+  margin-top: 8px;
+  margin-left: 70px;
   }
   a.Nav_Ant:hover{
       text-decoration: none;
@@ -187,7 +187,7 @@ div.tooltip {
 }
 .leftHomeNav{
     padding: 8px;
-    padding-top: 38px;
+    padding-top: 50px;
     padding-left: 25px;
     background-color: gray;
     height: 100%; 
@@ -310,6 +310,7 @@ li div{
 }
 .resumeWidth{
     min-width: 870px;
+    max-width: 1100px;
     margin-top: 8px;
 }
 .EduBoxes{
@@ -350,6 +351,37 @@ li div{
     background-color: #4d4d51;
     border-bottom-color: #4d4d51;
 }
+
+.nav > li.dropdown.open .dropdown-menu {
+  background-color: #4d4d51;
+  border-bottom-color: #4d4d51;
+  min-width: 100%;
+  left: 0;
+  display: inline-block; 
+}
+.dropdown-menu li>a{
+    color:white; 
+    font-weight: bold;
+    padding-top: 5px;
+    height: 33px;
+}
+.FBold{
+    font-weight: bold;
+}
 .Homebgc{
     background-color: cornflowerblue;
+}
+.ResumeCSS{
+    overflow: auto;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 780px) { 
+  .ProjNavPad { 
+    display: none; 
+  } 
 }
