@@ -191,7 +191,7 @@ div.tooltip {
     padding-left: 25px;
     background-color: gray;
     height: 100%; 
-    width: 25%;
+    width: 350p;
     position: fixed; 
     overflow: auto;
     z-index: 500
@@ -384,4 +384,17 @@ li div{
   .ProjNavPad { 
     display: none; 
   } 
+}
+
+@media only screen and (max-width: 780px) { 
+  .leftHomeNav{ 
+    width: 100%;
+    position: relative;
+  } 
+  .RightColRes{
+    padding-left: 0%;
+  }
+  .ResumeCSS{
+    overflow: initial;
+}
 }
