@@ -27688,7 +27688,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      { className: 'ResumeCSS' },
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'ResumeHeader' },

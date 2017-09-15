@@ -63,7 +63,7 @@ listKeyWords: function(val,x){
   render: function () {
     return (
       
-      <div>
+      <div className="ResumeCSS">
         <div className="ResumeHeader">
           <h2>BACKGROUND</h2>
         </div>
