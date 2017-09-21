@@ -27120,7 +27120,7 @@
 	              _react2.default.createElement(
 	                'h4',
 	                null,
-	                ' Acountant (CPA, CMA) and Programmer'
+	                'Programmer and Acountant (CPA, CMA)'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -27141,7 +27141,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                null,
-	                'I am currently seeking for opportunities initiaives. Please contact me at antonion90@gmail.com'
+	                'I am currently seeking for opportunities. Please contact me at antonion90@gmail.com'
 	              ),
 	              _react2.default.createElement('br', null)
 	            ),

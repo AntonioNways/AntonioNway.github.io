@@ -78,7 +78,7 @@ var Home = React.createClass({
             <br></br>
             <img src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzUjd2MllMc3lQcjg" className="img-responsive profileSize img-circle"/>
             <h2>Antonio Ng</h2>  
-            <h4> Acountant (CPA, CMA) and Programmer</h4>
+            <h4>Programmer and Acountant (CPA, CMA)</h4>
           </div>
           <div className="col-md-4">
             <br></br>
@@ -86,7 +86,7 @@ var Home = React.createClass({
           
                 <br></br>
                 <p>In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested in programming. From there, I have learned Python, Django, HTML, and CSS, Javascript, React, D3. </p>
-                <p>I am currently seeking for opportunities initiaives. Please contact me at antonion90@gmail.com</p>
+                <p>I am currently seeking for opportunities. Please contact me at antonion90@gmail.com</p>
                 <br></br>
           </div>
           
