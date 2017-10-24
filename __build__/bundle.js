@@ -26861,7 +26861,7 @@
 	                    { className: 'sr-only' },
 	                    '(current)'
 	                  ),
-	                  _react2.default.createElement('img', { alt: 'Linkedin', src: 'http://www.freeiconspng.com/uploads/linkedin-icon-1.png', className: 'icon_size' })
+	                  _react2.default.createElement('i', { className: 'fa fa-linkedin-square fa-lg', 'aria-hidden': 'true' })
 	                ),
 	                _react2.default.createElement(
 	                  'a',
@@ -26871,7 +26871,7 @@
 	                    { className: 'sr-only' },
 	                    '(current)'
 	                  ),
-	                  _react2.default.createElement('img', { alt: 'GitHub', src: 'http://www.freeiconspng.com/uploads/github-logo-icon-5.png', className: 'icon_size' })
+	                  _react2.default.createElement('i', { className: 'fa fa-github fa-lg', 'aria-hidden': 'true' })
 	                ),
 	                _react2.default.createElement(
 	                  'a',
@@ -26881,7 +26881,7 @@
 	                    { className: 'sr-only' },
 	                    '(current)'
 	                  ),
-	                  _react2.default.createElement('img', { alt: 'FreeCodeCamp', src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png', className: 'icon_size' })
+	                  _react2.default.createElement('i', { className: 'fa fa-free-code-camp fa-lg', 'aria-hidden': 'true' })
 	                )
 	              )
 	            )

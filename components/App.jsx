@@ -91,15 +91,15 @@ var App = React.createClass({
                   </li>
                 </ul>
                 <ul className="nav navbar-nav navbar-centre nav_top_margin1">
-                    <a className="navbar-brand" href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank"><span className="sr-only">(current)</span>
-                      <img alt="Linkedin" src="http://www.freeiconspng.com/uploads/linkedin-icon-1.png" className="icon_size"/>
-                    </a>
-                    <a className="navbar-brand" href="https://github.com/AntonioNways" target="_blank"><span className="sr-only">(current)</span>
-                      <img alt="GitHub" src="http://www.freeiconspng.com/uploads/github-logo-icon-5.png" className="icon_size"/>
-                    </a>
-                    <a className="navbar-brand" href="https://www.freecodecamp.com/antonionways" target="_blank"><span className="sr-only">(current)</span>
-                      <img alt="FreeCodeCamp" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png" className="icon_size"/>
-                    </a>
+                  <a className="navbar-brand" href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank"><span className="sr-only">(current)</span>
+                    <i className="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                  </a>
+                  <a className="navbar-brand" href="https://github.com/AntonioNways" target="_blank"><span className="sr-only">(current)</span>
+                    <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+                  </a>
+                  <a className="navbar-brand" href="https://www.freecodecamp.com/antonionways" target="_blank"><span className="sr-only">(current)</span>
+                    <i className="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>
+                  </a>
                 </ul>
               </div>
             </div>
