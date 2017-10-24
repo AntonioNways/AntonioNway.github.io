@@ -27005,169 +27005,210 @@
 	    {
 	      this.renderSVG();
 	    }
+	    {
+	      this.drawAxis();
+	    }
 	  },
 	  renderSVG: function renderSVG() {
 	    var TimeLineData = [[2012, "B.B.A. Graduate with Distinction"], [2013, "Work as Account Payable"], [2014, "Promoted to Staff Accountant"], [2015, "Becomes CPA,CMA"], [2016, "Explore Programming"], [2017.25, "March - Resign as an Accountant to pursue Programing"], [2017.43, "May - Obtained FCC's Front-end Development Certificate"], [2017.56, "July - Obtained FCC's Data-Visualization Certificate"]];
-	    var xSpac = 12;
+	    var xSpac = 42;
 	    var svg = d3.select("svg");
 	    var g = svg.append("g");
 	    var toolT = d3.select("#tooltip").style("opacity", 0);
 	    g.selectAll("circle").data(TimeLineData).enter().append("circle").style("opacity", 1).attr("class", "HoverTL").attr("cx", function (d, i) {
-	      return (d[0] - 2011) * xSpac + 25;
+	      return (d[0] - 2011) * xSpac + -1;
 	    }).attr("cy", function (d, i) {
-	      return (d[0] - 2011) * 55;
+	      return (d[0] - 2011) * 0 + 50;
 	    }).attr("r", 5).attr("fill", "blue").attr("stroke", "brown").attr("stroke-width", "0.3")
 	    //tooltip function here
 	    .on("mouseover", function (d, i) {
 	      toolT.transition().duration(300).style("opacity", .9);
-	      toolT.html("<center>" + d[0].toString().substring(0, 4) + " - " + d[1] + "</center>").style("left", Number(d3.select(this).attr("cx")) + 55 + "px").style("top", Number(d3.select(this).attr("cy")) + 60 + "px");
+	      toolT.html("<center>" + d[0].toString().substring(0, 4) + " - " + d[1] + "</center>").style("left", Number(d3.select(this).attr("cx")) + 10 + "px").style("top", Number(d3.select(this).attr("cy")) + 330 + "px");
 	    }).on("mouseout", function (d) {
 	      toolT.transition().duration(500).style("opacity", 0);
 	    });
+	  },
+	  drawAxis: function drawAxis() {
+	    var svg = d3.select("svg");
+	    var x = d3.scaleLinear().domain([2012, 2018]).range([38, 295]);
+	    svg.append("g").attr("transform", "translate(0," + 68 + ")").call(d3.axisBottom(x).tickFormat(d3.format("")).ticks(5));
+	    svg.append("text").attr("transform", "").attr("y", 100) //move downward
+	    .attr("x", 180) //move from the left to right
+	    .style("text-anchor", "middle").text("Year");
+	  },
+	  SkillList: function SkillList(val) {
+	    return _react2.default.createElement(
+	      'div',
+	      { key: val, id: val },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'bulletPoint' },
+	        _react2.default.createElement('i', { className: 'fa fa-check-square GreenColour', 'aria-hidden': 'true' }),
+	        '\xA0 ',
+	        val
+	      )
+	    );
+	  },
+	  ProjectInfoList: function ProjectInfoList(val) {
+	    return _react2.default.createElement(
+	      'div',
+	      { key: val, id: val },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-md-12 HomePicStyle' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: this.props.route.currentLink + "/projects/basic" },
+	          _react2.default.createElement('img', { src: val, className: 'img-responsive' })
+	        )
+	      )
+	    );
 	  },
 
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { className: 'nav_pad container-fluid' },
+	      null,
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'row Homebgc' },
+	        { className: 'Homebgc' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'col-md-12' },
-	          _react2.default.createElement('br', null),
-	          _react2.default.createElement('br', null)
-	        ),
-	        _react2.default.createElement('div', { className: 'col-md-1' }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-10' },
+	          { className: 'homeBGPic', id: 'bgholder' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-12' },
+	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-8 HomePicStyle' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/projects' },
-	                _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzWmQxRGtvejBoM0U', className: 'img-responsive ThemeSize' }),
-	                ' '
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-4 HomePicStyle' },
+	              { className: 'col-xs-12' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
+	                { className: '' },
 	                _react2.default.createElement(
-	                  'a',
-	                  { href: this.props.route.currentLink + "/projects/basic" },
-	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8', className: 'img-responsive' })
+	                  'p',
+	                  { className: 'text-center NameTitle' },
+	                  'Antonio  Ng'
 	                )
 	              ),
+	              _react2.default.createElement('br', null),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
+	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { href: this.props.route.currentLink + "/projects/react" },
-	                  _react2.default.createElement('img', { src: 'http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png', className: 'img-responsive HomeAppSizeSp' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-12 HomePicStyle HomeAppSize' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: this.props.route.currentLink + "/projects/d3" },
-	                  _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ', className: 'img-responsive' })
+	                  'p',
+	                  { className: 'text-center TitleTitle' },
+	                  'Developer and Accountant'
 	                )
 	              )
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-md-12' },
-	            _react2.default.createElement('br', null)
 	          )
 	        )
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: '' },
+	        { className: 'nav_pad container-fluid' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'row' },
+	          { className: '' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-12' },
-	            _react2.default.createElement('div', { className: 'col-md-1' }),
+	            { className: 'row' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-2 HomeALR' },
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzUjd2MllMc3lQcjg', className: 'img-responsive profileSize img-circle' }),
+	              { className: 'col-md-12' },
 	              _react2.default.createElement(
-	                'h2',
-	                null,
-	                'Antonio Ng'
+	                'div',
+	                { className: '' },
+	                _react2.default.createElement('img', { className: 'img-responsive FirstProfPic', src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzbFR5bUhmdXlCNFU' })
 	              ),
+	              _react2.default.createElement('div', { className: 'col-md-1' }),
 	              _react2.default.createElement(
-	                'h4',
-	                null,
-	                'Programmer and Acountant (CPA, CMA)'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-4' },
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement(
-	                'h1',
-	                null,
-	                'About Me'
-	              ),
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested in programming. From there, I have learned Python, Django, HTML, and CSS, Javascript, React, D3. '
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'I am currently seeking for opportunities. Please contact me at antonion90@gmail.com'
-	              ),
-	              _react2.default.createElement('br', null)
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-4 HomeARL' },
-	              _react2.default.createElement('br', null),
-	              _react2.default.createElement(
-	                'center',
-	                null,
+	                'div',
+	                { className: 'col-md-2 HomeALR' },
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('img', { src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzUjd2MllMc3lQcjg', className: 'img-responsive profileSize img-circle' }),
 	                _react2.default.createElement(
-	                  'h3',
+	                  'h2',
 	                  null,
-	                  'History'
+	                  'Antonio Ng'
+	                ),
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  ' Programmer and Acountant (CPA, CMA) '
 	                )
 	              ),
-	              _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
 	              _react2.default.createElement(
-	                'svg',
-	                { width: '350', height: '400' },
-	                _react2.default.createElement('line', { x1: 12 + 25, y1: '55', x2: 12 * 6.56 + 25, y2: 55 * 6.56, stroke: 'black' })
+	                'div',
+	                { className: 'col-md-4 AboutPad' },
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'h1',
+	                  null,
+	                  'About Me'
+	                ),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'In my 4 years of accounting experience, I had used my knowledge of Excel, SQL, and VBA to enhance the overall accounting system at work by automating multiple functions. From this experience, I became interested in programming. From there, I have learned Python, Django, HTML, and CSS, Javascript, React, D3. '
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'I am currently seeking for opportunities initiaives. Please contact me at antonion90@gmail.com'
+	                ),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'center',
+	                  null,
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'History'
+	                  )
+	                ),
+	                _react2.default.createElement('div', { className: 'tooltip', id: 'tooltip' }),
+	                _react2.default.createElement(
+	                  'svg',
+	                  { width: '350', height: '120' },
+	                  _react2.default.createElement('line', { x1: 12 + 25, y1: '50', x2: 42 * 6.56, y2: '50', stroke: 'black' })
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'col-md-1' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3 HomeARL' },
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'SkillPad' },
+	                  _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Skills'
+	                  )
+	                ),
+	                _react2.default.createElement('br', null),
+	                ["JavaScript", "Python", "SQL"].map(this.SkillList),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'SkillPad' },
+	                  _react2.default.createElement(
+	                    'h1',
+	                    null,
+	                    'Projects'
+	                  )
+	                ),
+	                ["https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8", "http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png", "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ"].map(this.ProjectInfoList)
 	              )
 	            )
-	          )
-	        ),
-	        _react2.default.createElement('div', { className: 'col-md-1' })
+	          ),
+	          _react2.default.createElement('div', { className: 'col-md-1' })
+	        )
 	      )
 	    );
 	  }
