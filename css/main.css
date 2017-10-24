@@ -1,32 +1,46 @@
- .Nav_Ant{
-  font-size: 45px;
-  color: #e2e2e2;
-  font-family: 'Qwigley', cursive;
-  margin-top: 8px;
+ .navbar-custom{
+    background-color: black;
+    border-bottom-color: white;
+}
+
+.Nav_Ant{
+  font-size: 31px;
+  color: white;
+  font-family: 'Courgette', cursive;
+  padding-top: 8px !important;
   margin-left: 70px;
   }
   a.Nav_Ant:hover{
       text-decoration: none;
-      color:#e2e2e2;}
-  a.Nav_Ant:link{color:#e2e2e2;
+      color:white;}
+  a.Nav_Ant:link{color:white;
   text-decoration: none;}
   a.Nav_Ant:active{color:white;
   text-decoration: none;}
-  a.Nav_Ant:visited{color:#e2e2e2;
+  a.Nav_Ant:visited{color:white;
   text-decoration: none;}
 
-  .nav_top_margin{
-    margin-top: 18px;
-  }
-  .nav_pad{
+.Ant_nav{
+    padding-top: 9px;
+}
+
+.nav_top_margin{
+    margin-top: 10px;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.nav_top_margin1{
+    margin-top: 8px;
+}
+
+
+.nav_pad{
     margin-top: 60px;
     z-index: 0;
     position: absolute;
-  }
-
-.nav_top_margin1{
-  margin-top: 10px;
-  }
+}
 
 .aboutpic{
   max-height: 230px;
@@ -35,8 +49,12 @@
 .port_pic{
   max-height: 300px;
 }
+.AboutPad{
+    padding-left: 3%;
+}
+
 body{
-  background-color: white;
+  background-color: #dbe7f9;
 }
 .profilebg{
     background-color: #8894e2;
@@ -84,19 +102,12 @@ body{
 .NavStyle{
   text-decoration:none;
 }
-.HomePicStyle{
-    padding-right: 1px;
-    padding-left: 2px;
-}
+
 .ThemeSize{
     height: 301px;
     width: 100%;
 }
-.HomeAppSize{
-  width: 297px;
-  height: 102px;
-  padding-bottom: 5px;
-}
+
 .HomeAppSizeSp{
   background: white;
   height: 97px;
@@ -157,7 +168,7 @@ body{
 div.tooltip {
   position: absolute;
   text-align: center;
-  width: 110px;
+  width: 135px;
   height: auto;
   min-height: 30px;
   padding: 2px;
@@ -348,11 +359,6 @@ li div{
  font-size: 1.5em;
 }
 
-.navbar-custom{
-    background-color: #4d4d51;
-    border-bottom-color: #4d4d51;
-}
-
 .nav > li.dropdown.open .dropdown-menu {
   background-color: #4d4d51;
   border-bottom-color: #4d4d51;
@@ -370,12 +376,64 @@ li div{
     font-weight: bold;
 }
 .Homebgc{
-    background-color: cornflowerblue;
+    background-image: url("https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzTTJZQ0d0bzlaYTUtWktXUU1UU2x6cnduTFN3");
+    width: 100%;
+    background-size: 100% 180%;
+    min-height: 550px;
+}
+.homeBGPic{
+    margin-top: 50px;
+    min-height: 200px;
+    width: 89%;
+}
+.NameTitle{
+    font-family: 'Fascinate Inline', cursive;
+    color: white;
+    font-size: 6.0em;
+    position: relative;
+    padding-left: 15%;
+    margin-top: 170px;
+}
+.TitleTitle{
+    font-family: 'Permanent Marker', cursive;
+    color: #3a7ce8;
+    font-size: 2.0em;
+    position: relative;
+    padding-left: 15%;
+    margin-top: -30px;
 }
 .ResumeCSS{
     overflow: auto;
 }
+.FirstProfPic{
+    border: 5px solid white;
+    width: 22%;
+    height: 22%;
+    min-width: 150px;
+    min-height: 165px;
+    margin-left:42%;
+    margin-top: -18%;
+}
+/*Skills & project */
+.GreenColour{
+    color: green;
+}
+.bulletPoint{
+    font-size: 25px;
+}
+.SkillPad{
+    padding-left: 15%;
+}
 
+.HomePicStyle{
+    padding-right: 1px;
+    margin-top: 5px;
+    padding-left: 2px;
+    width: 210px;
+    height: 68px;
+    padding-bottom: 5px;
+    border: 2px solid transparent;
+}
 
 
 
