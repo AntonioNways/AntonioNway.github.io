@@ -459,3 +459,9 @@ li div{
     padding-left: 0%;
   }
 }
+
+@media only screen and (max-width: 550px) { 
+    .HomeTop { 
+    display: none; 
+  } 
+}

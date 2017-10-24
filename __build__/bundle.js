@@ -27071,7 +27071,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'Homebgc' },
+	        { className: 'Homebgc HomeTop' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'homeBGPic', id: 'bgholder' },
@@ -27118,7 +27118,7 @@
 	              { className: 'col-md-12' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: '' },
+	                { className: 'HomeTop' },
 	                _react2.default.createElement('img', { className: 'img-responsive FirstProfPic', src: 'https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzbFR5bUhmdXlCNFU' })
 	              ),
 	              _react2.default.createElement('div', { className: 'col-md-1' }),
@@ -27201,7 +27201,8 @@
 	                    'h1',
 	                    null,
 	                    'Projects'
-	                  )
+	                  ),
+	                  _react2.default.createElement('br', null)
 	                ),
 	                ["https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8", "http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png", "https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzdTJmT2s3TjFTcjQ"].map(this.ProjectInfoList)
 	              )

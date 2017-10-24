@@ -78,7 +78,7 @@ var Home = React.createClass({
   render: function () {
     return (
       <div>
-        <div className="Homebgc">
+        <div className="Homebgc HomeTop">
           <div className="homeBGPic" id="bgholder">
             <div className="row">
               <div className="col-xs-12">
@@ -97,7 +97,7 @@ var Home = React.createClass({
         <div className="">
           <div className="row">
             <div className="col-md-12">
-              <div className="">
+              <div className="HomeTop">
                 <img className="img-responsive FirstProfPic" src="https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzbFR5bUhmdXlCNFU"  />
               </div>
               <div className="col-md-1"></div>
@@ -134,6 +134,7 @@ var Home = React.createClass({
                 <br></br>
                 <div className="SkillPad">
                   <h1>Projects</h1>
+                  <br></br>
                 </div>
                 {["https://drive.google.com/uc?export=download&id=0B9ldvGLcmpFzcFFDbm5KT011YW8",
                 "http://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png",
