@@ -26728,7 +26728,7 @@
 	            { className: 'container-fluid' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'navbar-header' },
+	              { className: 'navbar-header Ant_nav' },
 	              _react2.default.createElement(
 	                'button',
 	                { type: 'button', className: 'nav_top_margin navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#TopNavBar1' },

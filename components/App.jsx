@@ -42,7 +42,7 @@ var App = React.createClass({
         <div id="NavBar">
         <nav className={this.state.navState+" navbar navbar-inverse navbar-fixed-top"}>
             <div className="container-fluid">
-              <div className="navbar-header">    
+              <div className="navbar-header Ant_nav">    
                   <button type="button" className="nav_top_margin navbar-toggle collapsed" data-toggle="collapse" data-target="#TopNavBar1" >
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
