@@ -91,14 +91,14 @@ var App = React.createClass({
                   </li>
                 </ul>
                 <ul className="nav navbar-nav navbar-centre nav_top_margin1">
-                  <a className="navbar-brand" href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank"><span className="sr-only">(current)</span>
+                    <a className="navbar-brand" href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank"><span className="sr-only">(current)</span>
                     <i className="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
                   </a>
                   <a className="navbar-brand" href="https://github.com/AntonioNways" target="_blank"><span className="sr-only">(current)</span>
                     <i className="fa fa-github fa-lg" aria-hidden="true"></i>
                   </a>
                   <a className="navbar-brand" href="https://www.freecodecamp.com/antonionways" target="_blank"><span className="sr-only">(current)</span>
-                    <i className="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>
+                   <i className="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>
                   </a>
                 </ul>
               </div>
@@ -128,15 +128,15 @@ var App = React.createClass({
                 </div>
                 <div className="col-md-12">
                 <center>
-                    <a  href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank">
-                      <img alt="Linkedin" src="http://www.freeiconspng.com/uploads/linkedin-icon-1.png" className="icon_sizeNP"/>
-                    </a>
-                    <a  href="https://github.com/AntonioNways" target="_blank">
-                      <img alt="GitHub" src="http://www.freeiconspng.com/uploads/github-logo-icon-5.png" className="icon_sizeNP"/>
-                    </a>
-                    <a  href="https://www.freecodecamp.com/antonionways" target="_blank">
-                      <img alt="FreeCodeCamp" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/231853/freecodecamp.png" className="icon_sizeNP"/>
-                    </a>
+                    <a className="navbar-brand" href="https://ca.linkedin.com/in/antonio-ng-cpa-cma-7b8a6949" target="_blank"><span className="sr-only">(current)</span>
+                    <i className="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+                  </a>
+                  <a className="navbar-brand" href="https://github.com/AntonioNways" target="_blank"><span className="sr-only">(current)</span>
+                    <i className="fa fa-github fa-lg" aria-hidden="true"></i>
+                  </a>
+                  <a className="navbar-brand" href="https://www.freecodecamp.com/antonionways" target="_blank"><span className="sr-only">(current)</span>
+                   <i className="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>
+                  </a>
                 </center>
               </div>
               
